@@ -1,0 +1,305 @@
+Плагины
+	gulp-email-design — бесценный инструмент при верстки писем,
+	gulp-uncss — лучшее решение для оптимизации CSS файлов
+	jqueryplaceholder
+		if (!Modernizr.input.placeholder){
+			$('input, textarea').placeholder();
+		} //Если модернизер не поддерживает плейсхолдер то уключить его поддержку
+	normilize css
+		https://necolas.github.io/normalize.css/8.0.1/normalize.css
+
+-закрытие robots.txt 
+	User-agent: *
+	Disallow: /
+
+
+- Корректная работа при вбивании реального текста, надёжность вёрстки
+
+	Обязательно нужно проверять удаление заголовков! Бывает что отступы между блоками после этого схлопываются, это частая ошибка, причина — что отступы были заданы не для блоков, а для внутренних элементов — заголовоков.
+
+	Проверяется: на странице с контентом, пробуем добавлять и удалять содержимое – «что будет когда текста много?», «а когда мало?». 
+
+	Проверяется: на страницы с контентом вбиваем текст с абзацами и без абзацев (важно! бывает горе-верстальщики прописывают стили только для абзацев), со списками и картинками, таблицами и заголовками разных уровней.
+
+- Поддержка Retina
+
+	gulp img retina
+		npm install gulp-img-retina
+		https://www.npmjs.com/package/gulp-img-retina
+
+	Retina.js
+		Steps:
+			LESS
+				Add the .at2x() mixin from retina.less to your LESS stylesheet
+				In your stylesheet, call the .at2x() mixin anywhere instead of using background-image 
+
+				#logo {
+				  .at2x('/images/my_image.png', 200px, 100px);
+				}
+			HTML
+				For example, if you have an image on your page that looks like this:
+					<img src="/images/my_image.png" />
+
+					The script will check your server to see if an alternative image exists at this path:
+					"/images/my_image@2x.png"
+
+- Доступность при выключенных(загружающихся) картинках
+	npm install posthtml-alt-always --save-dev
+	npm install posthtml --save-dev
+
+	npm install gulp-posthtml --save-dev
+
+	gulpfile.js
+		var posthtml = require('gulp-posthtml');
+	 
+		gulp.task('html', function () {
+		    return gulp.src('./src/*.html').pipe(
+		        posthtml([
+		            require('posthtml-alt-always')({ /* options */ })
+		        ])
+		    ).pipe(
+		        gulp.dest('.')
+		    );
+		});
+
+- Шрифты
+	Локальное подключение
+		@font-face {
+		  font-family: 'Open Sans';
+		  font-weight: normal;
+		  font-style: normal;
+		  src: url(/fonts/OpenSans-Regular.eot); /* IE9 Compat Modes */
+		  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+		    url(/fonts/OpenSans-Regular.eot) format('embedded-opentype'), 
+		    url(/fonts/OpenSans-Regular.woff) format('woff'),
+		    url(/fonts/OpenSans-Regular.ttf) format('truetype'),
+		    url(/fonts/OpenSans-Regular.svg#OpenSans-Regular) format('svg');
+		}
+
+	В этом примере используется локальный пользовательский шрифт "Helvetica Neue Bold"; если у пользователя этот шрифт не установлен (используются два различных имени), тогда вместо него используется загружаемый шрифт с названием "MgOpenModernaBold.ttf":
+		@font-face {
+		  font-family: MyHelvetica;
+		  src: local("Helvetica Neue Bold"),
+		       local("HelveticaNeue-Bold"),
+		       url(MgOpenModernaBold.ttf);
+		  font-weight: bold;
+		}
+
+	Замена шрифтов на аналогичный в Linux
+		body {
+			font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+			}
+
+- Атрибут tabindex определяет последовательность перехода между ссылками при нажатии на кнопку
+	<a href="1.html" tabindex="1">Ссылка 1</a>
+
+-Modernizer
+	npm install --save-dev gulp-modernizr
+
+	var modernizr = require('gulp-modernizr');
+
+	gulp.task('modernizr', function() {
+	  return gulp.src('./js/*.js')
+	    .pipe(modernizr())
+	    .pipe(gulp.dest('build/'))
+	});
+
+	Примеры
+		.page:after {
+			linear-gradient
+		}
+
+		Вместо этого
+		.no-cssgradients .page {
+			background: #123456 url('../img/img.png');
+		}
+
+-тестирование верстки
+	Экстремальные состояния
+		Экстремальными состояниями мы называем те, в которых чаще всего ломается вёрстка: длинные тексты (которые могут ещё и не содержать пробелов), отсутствие элементов в блоке и другие.
+
+		https://developers.google.com/speed/pagespeed/insights/?hl=ru
+
+		https://gtmetrix.com
+
+-Типографика
+	«Если вы хотите, чтобы вашему читателю было комфортно, каждая строка должна содержать не более 60 знаков.
+	Длина строки не должна превышать 600 px
+	Что касается мобильных устройств, придерживайтесь диапазона в 30-40 знаков в строке.
+
+	По правилам, для обеспечения читабельности текста интерлиньяж должен быть примерно на 30% больше
+
+	Кернинг — расстояние между буквами
+
+	Кегль - высота в пунктах
+
+	Выравнивание ВСЕГДА должно быть по левому краю
+
+	Гарнитура
+		normal, bold, italic (должно быть разная насыщенность в пределах одной гарнитуры)
+
+	Насыщенность 
+		thin 100, 200 Extra Light (Ultra Light),  light 300, regular 400, medium 500, 600 Semi Bold, bold 700, 800 Extra Bold (Ultra Bold),  black 900
+
+	Контрстность
+		Проверить у нахаева
+
+-Семантика
+	Заголовки должны выделяться тегами H1, H2, H3, H4, но никак не B и STRONG.
+	При создании меню лучше всего использовать UL список, внутри которого будут лежать LI элементы меню. Этим мы показываем, что ссылки равносильные. Если имеются пункты второй вложенности, соответственно создаем внутри первичного LI элемента еще один UL список.
+	Все служебные картинки (иконки, стрелки, пульки…) должны быть прописаны в CSS коде. В HTML, тег IMG должен использоваться только для больших картинок. Большие, понятие растяжимое, скажем так, начиная с превьюшек 100 x 100 и выше.
+
+
+	https://html5book.ru/css-background/
+	<label class="file-default file-default_photo">
+		<input class="file-default__input" type="file" name="photo[]">
+		<div class="file-default__display">Загрузить фотографии с&nbsp;компьютера</div>
+	</label>
+	.main-form__uploaded-file-name_photo {
+	    background: url(../img/theme/icons/photo-camera_default.svg) no-repeat center left;  //без повтора по центру по вертикали слева по горизонтали
+	    background-size: 1rem; //размер svg
+	    //  div {background-size: 300px 150px;}
+			div {background-size: 50% 30%;}
+			div {background-size: cover;}
+			div {background-size: contain;}
+	}
+
+
+	Параграф блока текста создается с помощью P тега, но никак не DIV.
+	http://sitear.ru/material/semanticheskaya-verstka-semanticheskogo-koda
+
+	<header> - несколько, 
+	<nav> - несколько, 
+	<article> - несколько (<article><h2>...</h2><p>...</p></article>), 
+	<article> внутри <section> - да (  section <- нет <- контент автономен -> да -> article ) 
+	<section> — более крупный логический контейнер, объединяющий содержание по смыслу. Например, блок «О компании», список товаров, раздел личной информации в профиле и так далее.
+	<article> — самостоятельный, цельный и независимый раздел документа. Этот раздел можно в неизменном виде использовать в различных местах, в том числе и на других сайтах. Примеры: статья, пост в блоге, сообщение на форуме и так далее.
+	<address>
+	<time> <time datetime="2014-09-25"> 25 Сентября 2014</time>
+	<figure><img src="picture.jpg" alt="Осень"><figcaption>Осенний лес</figcaption></figure> - обертка с заголовком
+	<figcaption> - чтение экранного диктора
+	<mark> - выделение
+
+Теги + Стили
+
+-Ширина
+    width: auto;
+    max-width: 15rem;
+
+-Текст
+    white-space: nowrap; //запрет переноса строки
+    text-overflow: ellipsis; //троеточие работает только с overflow: hidden;
+    hyphens: auto;//перенос текста
+
+-Списки
+	.main-form__uploaded-file:last-child {
+	    margin-bottom: 0;
+	}
+
+-Формы рассмотреть
+
+-картинки
+	https://html5book.ru/css-background/
+	<label class="file-default file-default_photo">
+		<input class="file-default__input" type="file" name="photo[]">
+		<div class="file-default__display">Загрузить фотографии с&nbsp;компьютера</div>
+	</label>
+	.main-form__uploaded-file-name_photo {
+	    background: url(../img/theme/icons/photo-camera_default.svg) no-repeat center left;  //без повтора по центру по вертикали слева по горизонтали
+	    background-size: 1rem; //размер svg
+	    //  div {background-size: 300px 150px;}
+			div {background-size: 50% 30%;}
+			div {background-size: cover;}
+			div {background-size: contain;}
+	} для иконок которые не требуется менять в CMS
+
+	& .slick-prev:before {
+	    position: absolute;
+	    content: '\f053';
+	    display: block;
+	    font-family: $icons-font;
+	    top: 10px;
+	    left: 45px;
+	    @include responsive-font-size(35px);
+	    cursor: pointer;
+	    color: red;
+	  } fontawesome
+
+  	.album-gallery .image-wrap {
+	    object-fit: cover;
+	    object-position: center;
+	    height: 100%;
+	    max-height: 82px;
+	}  //картинка
+	.album-gallery .image-wrap {
+	    height: 171px;
+	    flex: 0 0 33.33333%;
+	    max-width: 33.33333%;
+	    position: relative;
+	    width: 100%;
+	    min-height: 1px;
+	}//родитель  - просто пример
+
+	figure
+	    flex: 0 0 30%;
+	    position: relative
+    a
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: auto;
+	    display: block;
+    img
+    	width: 100%;
+    	height: 100%;
+	div
+		pr30px отступ влево если карта горизоньальная
+		http://union.acommandpro.com - карточка товара через тег img
+
+	<figure class="public__img-block">
+        <div class="public__img" style="background-image: url(img/content/public/bread.png)"></div>
+    </figure>
+    figure {
+	    position: relative;
+	    display: block;
+	    height: 12.5rem;
+    }
+    .public__img {
+	    border-top-left-radius: 2rem;
+	    border-top-right-radius: 2rem;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    background-repeat: no-repeat;
+	    background-position: center top;
+	    background-size: cover;
+	} -приоритет верстать так
+
+-absolute
+	transform: translateX(-50%);
+	transform: translate(50%, 50%);
+
+-bootstrap
+	.container {
+	    width: 100%;
+	    padding-right: 15px;
+	    padding-left: 15px;
+	    margin-right: auto;
+	    margin-left: auto;
+	    max-width: 1200px;
+	}
+	.row {
+	    display: flex;
+	    flex-wrap: wrap;
+	    margin-right: -15px;
+	    margin-left: -15px;
+	}
+	.col-6 {
+	    -ms-flex: 0 0 50%;
+	    flex: 0 0 50%;
+	    max-width: 50%;
+	}
+	
