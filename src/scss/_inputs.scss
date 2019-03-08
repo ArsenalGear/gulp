@@ -1,0 +1,29 @@
+.input-default {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: .5rem .75rem;
+  background: $white;
+  border: 1px solid $border-default-color;
+  border-radius: $border-radius-default;
+  font: 400 .875rem/1.25rem $font-main;
+  color: #000;
+
+  &::placeholder {
+    opacity: 1;
+    font: 500 0.75rem/1.125rem $font-main;
+    color: #000;
+  }
+  &:hover {
+    transition: $transition-default;
+    border-color: red;
+  }
+  &:focus {
+    transition: $transition-default;
+    border-color: red;
+  }
+}
+
+@media screen and (max-width: 991px) {
+
+}

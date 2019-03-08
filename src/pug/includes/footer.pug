@@ -1,5 +1,18 @@
-//+b('div').footer
-//    .container
-//        .row.justify-content-center
-//            +e('div').desc-black всего: <span id="total-black">999 999 </span> р.
-//            +e('div').desc рассчитать стоимость
++b('div').footer
+    .container
+        +e('div').info-blocks
+            .row
+                .col-lg-5.order-lg-2.order-sm-1.order-2
+                    +e('ul').additional-menu
+                        +e('li').additional-menu-item
+                            +e('a').additional-menu-link(href='#') Условия использования
+                        +e('li').additional-menu-item
+                            +e('a').additional-menu-link(href='#') Политика конфиденциальности
+                        +e('li').additional-menu-item
+                            +e('a').additional-menu-link(href='#') Карта сайта
+                .col-lg-4.col-sm-6.order-lg-1.order-sm-2.order-3
+                    +e('p').copyright TravelClass© 2018. Все права защищены
+                .col-lg-3.col-sm-6.order-lg-3.order-sm-3.order-1
+                    +e('div').callback
+                        +e('a').phone(href='tel:' + tel)= phone
+                        +e('a').free-call(href='#') Бесплатный звонок

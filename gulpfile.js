@@ -37,13 +37,13 @@ gulp.task('scss', function () {
 gulp.task('js-libs', function () {
     return gulp.src([
         'node_modules/jquery/dist/jquery.js',
-        'node_modules/tether/dist/js/tether.js',
-        'node_modules/bootstrap/dist/js/bootstrap.js',
-        'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
-        // 'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
-		'node_modules/jquery-ui/ui/widgets/datepicker.js',
+        // 'node_modules/tether/dist/js/tether.js',
+        // 'node_modules/bootstrap/dist/js/bootstrap.js',
+        // 'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
+        'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+		// 'node_modules/jquery-ui/ui/widgets/datepicker.js',
 		// 'node_modules/jquery-ui/ui/widgets/slider.js',
-		'node_modules/jquery-ui/ui/i18n/datepicker-ru.js',
+		// 'node_modules/jquery-ui/ui/i18n/datepicker-ru.js',
 		// 'node_modules/timepicker/jquery.timepicker.js',
         // 'node_modules/select2/dist/js/select2.full.js',
         // 'node_modules/select2/dist/js/i18n/ru.js',
@@ -57,10 +57,10 @@ gulp.task('js-libs', function () {
 gulp.task('css-libs', function () {
     return gulp.src([
         'node_modules/bootstrap/dist/css/bootstrap-grid.css',
-        // 'node_modules/magnific-popup/dist/magnific-popup.css',
-        'node_modules/jquery-ui/themes/base/datepicker.css',
+        'node_modules/magnific-popup/dist/magnific-popup.css',
+        // 'node_modules/jquery-ui/themes/base/datepicker.css',
         // 'node_modules/jquery-ui/themes/base/slider.css',
-        'node_modules/jquery-ui/themes/base/theme.css',
+        // 'node_modules/jquery-ui/themes/base/theme.css',
         // 'node_modules/timepicker/jquery.timepicker.css',
         // 'node_modules/select2/dist/css/select2.css',
         'node_modules/slick-carousel/slick/slick.css',

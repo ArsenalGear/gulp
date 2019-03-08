@@ -1,7 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c1a9b17-21e6-455c-b7ad-e84ed35fd7fe" name="Default Changelist" comment="" />
+    <list default="true" id="6c1a9b17-21e6-455c-b7ad-e84ed35fd7fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pug/add-excursion.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pug/includes/modals.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/libs.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/libs.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/includes/footer.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/includes/footer.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/layouts/site.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/layouts/site.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_default.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_default.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_inputs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_inputs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_media.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_media.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_modals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_modals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Справочник по верстке.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Справочник по верстке.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/доп. страница/lend.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/доп. страница/lending.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/01.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/01_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/01_2.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/03.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/04.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/05.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/06.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/07.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/08.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/09.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/desktop/10.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/01_2_320.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/01_2_320.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/01_320.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/01_320.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/03_320.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/03_320.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/04_320.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/04_320.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/05_320.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/05_320.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/06_320.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/06_320.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/07_320.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/07_320.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/08_320.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/08_320.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/09_320.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/09_320.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/10_320.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/10_320.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/11_user_320.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/11_user_320.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/12_menu_320.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/mobile/12_menu_320.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/ui/ui-assets/124imaige-foto.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/ui/ui-assets/errors.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/ui/ui.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/исходники/ui/ui.psd" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -15,10 +89,73 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Справочник по верстке.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="796" column="9" selection-start-line="796" selection-start-column="9" selection-end-line="796" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pug/index.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/src/scss/_default.scss" />
+        <option value="$PROJECT_DIR$/src/scss/_inputs.scss" />
+        <option value="$PROJECT_DIR$/src/scss/_modals.scss" />
+        <option value="$PROJECT_DIR$/src/scss/_variables.scss" />
+        <option value="$PROJECT_DIR$/src/scss/_media.scss" />
+        <option value="$PROJECT_DIR$/src/scss/_buttons.scss" />
+        <option value="$PROJECT_DIR$/src/pug/includes/footer.pug" />
+        <option value="$PROJECT_DIR$/src/pug/layouts/site.pug" />
+        <option value="$PROJECT_DIR$/src/scss/main.scss" />
+        <option value="$PROJECT_DIR$/src/pug/index.pug" />
+        <option value="$PROJECT_DIR$/src/js/common.js" />
+        <option value="$PROJECT_DIR$/Справочник по верстке.txt" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="229" />
@@ -53,6 +190,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Arsi\WebstormProjects\gulp\src\pug\includes" />
+      <recent name="C:\Users\Arsi\WebstormProjects\gulp\src\pug" />
       <recent name="C:\Users\Arsi\WebstormProjects\gulp" />
     </key>
   </component>
@@ -80,28 +219,40 @@
       <updated>1551550216073</updated>
       <workItem from="1551550218948" duration="309000" />
       <workItem from="1551551104551" duration="253000" />
+      <workItem from="1551552592682" duration="769000" />
+      <workItem from="1551941635165" duration="683000" />
+      <workItem from="1552042653859" duration="5423000" />
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1551552748927</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1551552748927</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="562000" />
+    <option name="totallyTimeSpent" value="7437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="85" y="-8" width="1843" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2498615" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16398892" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32917964" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32917964" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.33541018" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -111,12 +262,159 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/smeta_common.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Справочник по верстке.txt">
+    <entry file="file://$PROJECT_DIR$/src/js/common1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4539">
+          <folding>
+            <element signature="e#160#166#0" expanded="true" />
+            <element signature="e#182#188#0" expanded="true" />
+            <element signature="e#160#166#0" expanded="true" />
+            <element signature="e#182#188#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/исходники/mobile/01_2_320.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server_gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2499" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="92" column="25" lean-forward="true" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/_inputs.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/_default.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/_modals.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/_selects.scss">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/_media.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/modals.pug">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/_buttons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/blocks/breadcrumbs.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="49" lean-forward="true" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/footer.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="64" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/head.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/includes/header.pug">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/layouts/site.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/add-excursion.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-802" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scss/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pug/index.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Справочник по верстке.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="796" column="9" selection-start-line="796" selection-start-column="9" selection-end-line="796" selection-end-column="9" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

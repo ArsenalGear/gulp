@@ -1,4 +1,203 @@
-Плагины
+Закрыть вопросы
+
+-Гриды
+
+-как кастомизировать селекты в 2018 году
+
+-Полифилы
+
+-микроразметка css
+
+-GITflow фронт
+
+
+
+
+-проверить взятие с макетов размеров
+
+-сверстать что то
+
+-Настроить Галп на гите
+
+
+
+
+
+
+-sass миксины (куски повторяющегося кода)
+	bottom: $one * $two; //арифметические операции
+
+	@mixin large-text {
+		font: 300 1rem/1.2rem $font-main;
+		color: red;
+	} //создание миксина
+	p {
+		@include large-text;
+		position: relative;
+	}// вызов миксина
+
+	@mixin my-border:($color, $width) {
+		border{
+			color: $color;
+			width: $width;
+			style: dashed;
+		}
+	} //создание миксина как функцию для занесения параметров в качестве его аргументов
+	p {
+		@include my-border:(red, 2px);
+	} //вывод миксина
+	h1 {
+		@include my-border:(red);
+	}//вывод миксина c 1 из 2х параметров
+
+-Онлайн сервисы для макетов
+	Zeplin PSD -> WEB 1 проект бесплатно
+	Avocode PSD Sketch
+	Figma Sketch
+	Mockupplus прототипы -> HTML, exe, PNG
+
+-Медиа стараться писать в своих стилях без отдельного include media
+
+-coverage для проверки используемого и неиспользуемого CSS В ХРОМЕ
+
+-Pixel Perfect
+	Заголовок на винде 600,а на Mac выглядит как 900 - сглаживание шрифтов (ответ он должен выглядеть так, как должен выглядеть на Виндовс и должен выглядеть так как должен выглядеть на Маке - не пытайтесь привести все к одному виду)
+
+	-webkit - хром, мобильные и десктопные браузеры сафари(новый вебкит), Андроид (до версии киткат старый вебкит)
+	-gecko -мозила (десктоп платформы мозилы +  и мозила андроид)
+
+	На Iphone все браузеры используют встроенный движок вебкит
+	На Android все браузеры идут в большинстве со своими движками или использую встроенный хромиум
+
+	Размеры отступов шрифта, высоту строки, цвета еще можно гарантировать, то сглаживание текста, размытие теней, рендеринг графики и внешний вид системных контролов лучше даже не пытаться привести к общему виду.
+
+-Видео с youtube
+	https://www.youtube.com/watch?v=4JS70KB9GS0
+	https://www.youtube.com/watch?v=4JS70KB9GS0
+
+-Использование переменных в CSS
+	Объявлять в root в начале документа
+		:root {
+		  --main-bg-color: brown;
+		}
+	Объвление переменной:
+		element {
+		  --main-bg-color: brown;
+		}
+	Использование переменной:
+		element {
+			background-color: var(--main-bg-color);
+		}
+
+-GET
+
+	В конце адреса картинки или другого файла можно поставить ?img и тогда открыть консоль или нетворк и посмотреть инфу о файле
+
+-пути
+	Путь для относительных ссылок имеет три специальных обозначения:
+	/ указывает на корневую директорию и говорит о том, что нужно начать путь от корневого каталога документов и идти вниз до следующей папки
+	./ указывает на текущую папку
+	../ подняться на одну папку (директорию) выше
+
+-теговая карта
+
+	https://html5book.ru/examples/html-tags.html
+
+-https://html5book.ru/osnovy-html/#part2
+
+-заглушка под ie меньше 10
+
+	https://github.com/burocratik/outdated-browser
+
+-прокрутка вверх до якоря
+	if($('.form-sidebar__link').length > 0 && $('#header').length > 0){
+		$('body').on('click', '.form-sidebar__link', function (e) {
+			e.preventDefault();
+			var thisId = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop: $(thisId).offset().top - $('#header').outerHeight()
+			}, 1000);
+		});
+	}
+	http://localhost:3000/add-excursion.html#section-basic-information
+	<a class="form-sidebar__link" href="#section-basic-information">Основная информация</a>
+	.form-sidebar {
+	    position: sticky;
+	    top: 0;
+	    display: block;
+	    padding: 5.688rem 0 1.875rem;
+	    margin-top: -3.813rem;
+	}
+
+-верстка карточек товара
+	https://html5book.ru/dizayn-kartochek-tovara/
+	https://placeholder.com
+	https://via.placeholder.com/728x90.png
+
+-верстка под ie < 10
+
+	Короче была такая программа которая спустя пару лет после моего рождения еще могла называться браузером
+
+-Эмуляции
+
+ В IE есть возможность эмуляции старых браузеров
+
+-https://ru.bem.info БЭМ
+	имена блоков и элементов - кэмелкейсом
+	блок всегда может существовать отдельно друг от друга в любом другом месте
+
+	productItem__price - цена товара
+	productItem__price productItem__price-sale - цена товара со скидкой (другой цвет цены) и там прописываются не все стили а только отличительные
+
+	БЭМ Реакт https://www.youtube.com/watch?v=BuKeVrQmVKI
+
+-Скринреадер NVDA
+
+-кроссбраузерная верстка https://youtu.be/xFZWHLjNXdI?t=324
+
+-кроссплатформенная верстка
+	Соответственно видно, что добиться более-менее одинакового отображения шрифтов можно используя семейство sans-serif с указанием размера в пикселях. Я еще для более удобного чтения разряжаю текст, увеличивая межстрочный интервал: font: 12px/150% Verdana, sans-serif;
+
+	Чтобы избежать ситуации, показанной на скриншоте выше, необходимо для каждого поля прописать свойство width с явным указанием размера в пикселях. Дефолтный размер форм или размер, указанный не в пикселях, может отличаться в разных браузерах под разными осями, причем иногда на много, из-за чего верстка может расползтись.
+
+-использование фильтров css
+	.blur {
+	    filter: blur(5px);
+	    -webkit-filter: blur(5px);
+	    -moz-filter: blur(5px);
+	    -o-filter: blur(5px);
+	    -ms-filter: blur(5px);
+	}
+	https://html5book.ru/css3-filtry/
+
+-Понимать отличие фиксированной, адаптивной и резиновой верстки
+	фиксированная Блоки не меняют свою ширину. На мониторах с маленьким разрешением появляется горизонтальная полоса прокрутки.
+
+	//разницу между дизайном mobile first и адаптивным мобильным дизайном(медиа-запросов), так как последний берет имеющиеся элементы и масштабирует их под экран, но не уменьшает при этом размер файла.
+
+	отзывчвая(responsive, резиновый, медиа запросы) является частью адаптивного Блоки меняют свою ширину в зависимости от размера окна браузера
+
+	адаптивный дизайн это резиновый макет + прогрессивное улучшение
+	Воплощается с помощью @ Media или благодаря скриптам
+
+-ПОТОК
+
+	Когда размер экрана уменьшается, содержимое страницы начинает занимать больше высоты, и элементы начинают смещаться вниз. Такое поведение называется потоком
+
+-Понимать особенности верстки под высокий ppi и mobile first проектов
+	-mobile first: верстаем css стили и прям внутри блока указываем сверху вниз медиа запросы от 576 вниз до 1199
+
+	-PPi + rem + @2 + @3 (ipad)
+		em — в типографике относительная единица длины, равная размеру текущего шрифта
+
+		Rem — это корневой em (Root Em). Он создан, чтобы облегчить вычислительные проблемы, с которыми многие иногда сталкиваются.
+		Это единица типографики, равная корневому (базовому) значению font-size. Это значит, что 1rem всегда будет равен значению font-size, которое было определено в html.
+
+-Уметь пользоваться cli интерфейсом //консоль
+
+-Знать и применять таскранеры(постпроцессор), модуль-бандлеры //gulp, webpack
+
+-Плагины
 	gulp-email-design — бесценный инструмент при верстки писем,
 	gulp-uncss — лучшее решение для оптимизации CSS файлов
 	jqueryplaceholder
@@ -8,21 +207,47 @@
 	normilize css
 		https://necolas.github.io/normalize.css/8.0.1/normalize.css
 
--закрытие robots.txt 
+-закрытие robots.txt
 	User-agent: *
 	Disallow: /
 
+-Анимации
+	список анимируемых свойств https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties
+	статья анимации https://html5book.ru/css3-animation/#keyframes
+	https://www.youtube.com/watch?v=YWjuEzhPYqs
+	Если необходимо чтобы анимация выполнялась при загрузке страницы или нужна более сложная, чем от А состояния к B состоянию, то в таком случае более подходящим является CSS анимация.
 
-- Корректная работа при вбивании реального текста, надёжность вёрстки
+	@keyframes shadow {
+		from {text-shadow: 0 0 3px black;}
+		50% {text-shadow: 0 0 30px black;}
+		to {text-shadow: 0 0 3px black;}
+	}//свойства которые будут анимироваться
+	После объявления правила @keyframes, мы можем ссылаться на него в свойстве animation:
+	h1 {
+		font-size: 3.5em;
+		color: darkmagenta;
+		animation: shadow  2s infinite ease-in-out 1s infinite alternate; //имя, время проигрывания, вид анимации кубик бейзер от from до to, время задержки, цикличность(можно написать 4 цикла), задомнаперед
+	}// по hover, чтобы остановить анимацию можно написать animation-play-state: paused
 
+	-transition,
+		CSS3-переходы позволяют анимировать исходное значение CSS-свойства на новое значение с течением времени, управляя скоростью смены значений свойств. Большинство свойств меняют свои значения за 16 миллисекунд, поэтому рекомендуемое время стандартного перехода — 200ms.
+		https://html5book.ru/css3-transition/
+		Если ты хочешь изменить элемент плавно с одного состояния в другой, лучше использовать transition
+
+	-transform
+		https://html5book.ru/css3-transform/
+		CSS3-трансформации позволяют сдвигать, поворачивать и масштабировать элементы. Трансформации преобразовывают элемент, не затрагивая остальные элементы веб-страницы, т.е. другие элементы не сдвигаются относительно него.
+
+-Корректная работа при вбивании реального текста, надёжность вёрстки
 	Обязательно нужно проверять удаление заголовков! Бывает что отступы между блоками после этого схлопываются, это частая ошибка, причина — что отступы были заданы не для блоков, а для внутренних элементов — заголовоков.
 
-	Проверяется: на странице с контентом, пробуем добавлять и удалять содержимое – «что будет когда текста много?», «а когда мало?». 
+	Проверяется: на странице с контентом, пробуем добавлять и удалять содержимое – «что будет когда текста много?», «а когда мало?».
 
 	Проверяется: на страницы с контентом вбиваем текст с абзацами и без абзацев (важно! бывает горе-верстальщики прописывают стили только для абзацев), со списками и картинками, таблицами и заголовками разных уровней.
 
-- Поддержка Retina
+	margin-bottom от элемента должен быть равен margin-top по верстке за ним идущего
 
+-Поддержка Retina
 	gulp img retina
 		npm install gulp-img-retina
 		https://www.npmjs.com/package/gulp-img-retina
@@ -31,7 +256,7 @@
 		Steps:
 			LESS
 				Add the .at2x() mixin from retina.less to your LESS stylesheet
-				In your stylesheet, call the .at2x() mixin anywhere instead of using background-image 
+				In your stylesheet, call the .at2x() mixin anywhere instead of using background-image
 
 				#logo {
 				  .at2x('/images/my_image.png', 200px, 100px);
@@ -43,7 +268,7 @@
 					The script will check your server to see if an alternative image exists at this path:
 					"/images/my_image@2x.png"
 
-- Доступность при выключенных(загружающихся) картинках
+-Доступность при выключенных(загружающихся) картинках
 	npm install posthtml-alt-always --save-dev
 	npm install posthtml --save-dev
 
@@ -51,7 +276,7 @@
 
 	gulpfile.js
 		var posthtml = require('gulp-posthtml');
-	 
+
 		gulp.task('html', function () {
 		    return gulp.src('./src/*.html').pipe(
 		        posthtml([
@@ -62,7 +287,12 @@
 		    );
 		});
 
-- Шрифты
+-Шрифты
+
+	font-display - работает с прыжками шрифтов во время загрузки
+
+	Подключать первым Woff2 потом woff, остальные нужны для браузеров которых нет в статисттике посещений моего сайта )
+
 	Локальное подключение
 		@font-face {
 		  font-family: 'Open Sans';
@@ -70,7 +300,7 @@
 		  font-style: normal;
 		  src: url(/fonts/OpenSans-Regular.eot); /* IE9 Compat Modes */
 		  src: local('Open Sans Regular'), local('OpenSans-Regular'),
-		    url(/fonts/OpenSans-Regular.eot) format('embedded-opentype'), 
+		    url(/fonts/OpenSans-Regular.eot) format('embedded-opentype'),
 		    url(/fonts/OpenSans-Regular.woff) format('woff'),
 		    url(/fonts/OpenSans-Regular.ttf) format('truetype'),
 		    url(/fonts/OpenSans-Regular.svg#OpenSans-Regular) format('svg');
@@ -89,9 +319,6 @@
 		body {
 			font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
 			}
-
-- Атрибут tabindex определяет последовательность перехода между ссылками при нажатии на кнопку
-	<a href="1.html" tabindex="1">Ссылка 1</a>
 
 -Modernizer
 	npm install --save-dev gulp-modernizr
@@ -138,7 +365,7 @@
 	Гарнитура
 		normal, bold, italic (должно быть разная насыщенность в пределах одной гарнитуры)
 
-	Насыщенность 
+	Насыщенность
 		thin 100, 200 Extra Light (Ultra Light),  light 300, regular 400, medium 500, 600 Semi Bold, bold 700, 800 Extra Bold (Ultra Bold),  black 900
 
 	Контрстность
@@ -168,10 +395,10 @@
 	Параграф блока текста создается с помощью P тега, но никак не DIV.
 	http://sitear.ru/material/semanticheskaya-verstka-semanticheskogo-koda
 
-	<header> - несколько, 
-	<nav> - несколько, 
-	<article> - несколько (<article><h2>...</h2><p>...</p></article>), 
-	<article> внутри <section> - да (  section <- нет <- контент автономен -> да -> article ) 
+	<header> - несколько,
+	<nav> - несколько,
+	<article> - несколько (<article><h2>...</h2><p>...</p></article>),
+	<article> внутри <section> - да (  section <- нет <- контент автономен -> да -> article )
 	<section> — более крупный логический контейнер, объединяющий содержание по смыслу. Например, блок «О компании», список товаров, раздел личной информации в профиле и так далее.
 	<article> — самостоятельный, цельный и независимый раздел документа. Этот раздел можно в неизменном виде использовать в различных местах, в том числе и на других сайтах. Примеры: статья, пост в блоге, сообщение на форуме и так далее.
 	<address>
@@ -180,126 +407,391 @@
 	<figcaption> - чтение экранного диктора
 	<mark> - выделение
 
-Теги + Стили
+-Теги + Стили
 
--Ширина
-    width: auto;
-    max-width: 15rem;
+	-outline не убирать для взаимодействия с элементом в фокусе (передвигаемся табом) с клавиатуры (кнопки, инпуты). Это все равно что писать в редакторе кода отвлечься, а потом ты не видишь где остановился и курсора тоже нет.
 
--Текст
-    white-space: nowrap; //запрет переноса строки
-    text-overflow: ellipsis; //троеточие работает только с overflow: hidden;
-    hyphens: auto;//перенос текста
+	-замена display: none; - так соседние элементы про него ничего не знают, он полностью вырубается из дерева и скринридеры его не видят
+		добавлять класс
+		.visually-hidden {
+			position: absolute;
+			clip: rect(0 0 0 0);
+			width: 1px;
+			height: 1px;
+			margin: -1px;
+		}
 
--Списки
-	.main-form__uploaded-file:last-child {
-	    margin-bottom: 0;
-	}
+	-таблицы
+		https://html5book.ru/shpargalka-po-tablicam/
+		https://html5book.ru/krasivoe-oformlenie-tablic/
 
--Формы рассмотреть
+		vertical-align: top
 
--картинки
-	https://html5book.ru/css-background/
-	<label class="file-default file-default_photo">
-		<input class="file-default__input" type="file" name="photo[]">
-		<div class="file-default__display">Загрузить фотографии с&nbsp;компьютера</div>
-	</label>
-	.main-form__uploaded-file-name_photo {
-	    background: url(../img/theme/icons/photo-camera_default.svg) no-repeat center left;  //без повтора по центру по вертикали слева по горизонтали
-	    background-size: 1rem; //размер svg
-	    //  div {background-size: 300px 150px;}
-			div {background-size: 50% 30%;}
-			div {background-size: cover;}
-			div {background-size: contain;}
-	} для иконок которые не требуется менять в CMS
+	-правила использования кнопки, ссылки, div
+		Если клик приведёт к смене адреса,
+		этот адрес можно скопировать,
+		отправить по электронной почте,
+		на него можно снова зайти,
+		это не адрес самой страницы - это ссылка
+		hover, focus(TAB), active(кликнул ссылку но не отпустил), visited
 
-	& .slick-prev:before {
-	    position: absolute;
-	    content: '\f053';
-	    display: block;
-	    font-family: $icons-font;
-	    top: 10px;
-	    left: 45px;
-	    @include responsive-font-size(35px);
-	    cursor: pointer;
-	    color: red;
-	  } fontawesome
 
-  	.album-gallery .image-wrap {
-	    object-fit: cover;
-	    object-position: center;
-	    height: 100%;
-	    max-height: 82px;
-	}  //картинка
-	.album-gallery .image-wrap {
-	    height: 171px;
-	    flex: 0 0 33.33333%;
-	    max-width: 33.33333%;
-	    position: relative;
-	    width: 100%;
-	    min-height: 1px;
-	}//родитель  - просто пример
+	-Если клик не меняет адрес страницы,
+		адрес нельзя скопировать
+		и нельзя этим адресом поделиться — это кнопка.
+		button, button:hover, button:focus, button:active
 
-	figure
-	    flex: 0 0 30%;
-	    position: relative
-    a
-	    position: absolute;
-	    left: 0;
-	    top: 0;
-	    width: 100%;
-	    height: auto;
-	    display: block;
-    img
-    	width: 100%;
-    	height: 100%;
-	div
-		pr30px отступ влево если карта горизоньальная
-		http://union.acommandpro.com - карточка товара через тег img
+	-правила использвования dip p span
+		div используется для группировки span элементов
+		p используется для абзацев и группировки span элементов
+		span используется для обертки 1 слова
 
-	<figure class="public__img-block">
-        <div class="public__img" style="background-image: url(img/content/public/bread.png)"></div>
-    </figure>
-    figure {
-	    position: relative;
-	    display: block;
-	    height: 12.5rem;
-    }
-    .public__img {
-	    border-top-left-radius: 2rem;
-	    border-top-right-radius: 2rem;
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    right: 0;
-	    bottom: 0;
-	    background-repeat: no-repeat;
-	    background-position: center top;
-	    background-size: cover;
-	} -приоритет верстать так
+	-Заголовки h1-h6
+		h1 2rem (lh 3.34)
+		h2 1.5rem (lh 3.16)
+		h3 1.17rem (lh 3.17)
+		h4 1rem (lh 1.33)
+		h5 0.83rem (lh 1.67)
+		h6 0.67rem (lh 2.33)
 
--absolute
-	transform: translateX(-50%);
-	transform: translate(50%, 50%);
+	-списки
+		list-style: inside none;
 
--bootstrap
-	.container {
-	    width: 100%;
-	    padding-right: 15px;
-	    padding-left: 15px;
-	    margin-right: auto;
-	    margin-left: auto;
-	    max-width: 1200px;
-	}
-	.row {
-	    display: flex;
-	    flex-wrap: wrap;
-	    margin-right: -15px;
-	    margin-left: -15px;
-	}
-	.col-6 {
-	    -ms-flex: 0 0 50%;
-	    flex: 0 0 50%;
-	    max-width: 50%;
-	}
-	
+	-font
+		font: 400 .813rem/1.063rem $font-main;
+		font: 300 italic 1.25rem/1.5rem $font-main;
+
+		font: inherit;
+
+		p strong {
+	      font-weight: 700;
+	    }
+
+	-select
+		+e('select').select_main-page(name='age', data-placeholder='от 12 до 17 лет')
+            +e('option')
+            +e('option')(value='0') Младше 12 лет
+
+	-Ширина
+	    width: auto;
+	    max-width: 15rem;
+
+	    width: max-content;
+
+	-Текст
+	    white-space: nowrap; //запрет переноса строки
+	    text-overflow: ellipsis; //троеточие работает только с overflow: hidden;
+	    hyphens: auto;//перенос текста
+
+	-Списки
+		.main-form__uploaded-file:last-child {
+		    margin-bottom: 0;
+		}
+
+	-Изображения
+		Карты
+			https://html5book.ru/images-in-html/
+			https://www.image-maps.com
+
+	-формы
+		<form name="mail-form" action="mailto:адрес вашей электронной почты" enctype="text/plain"></form>
+
+		 <fieldset name="" disabled>
+		    <legend>Контактная информация</legend>
+		    <p><label for="name">Имя <em>*</em></label><input type="text" id="name"></p>
+		    <p><label for="email">E-mail</label><input type="email" id="email"></p>
+		 </fieldset>
+
+		 +e('button').submit.button_default(type='submit', value='Подобрать')
+
+		 INPUT
+		 input type="image" Поле с изображением. При нажатии на рисунок данные формы отправляются на сервер.
+
+		 <input type="button" /> не будут отправлять форму - они ничего не делают по умолчанию. Они обычно используются в сочетании с JavaScript как часть приложения AJAX.
+
+		 autofocus
+
+		 checked
+
+		 type
+
+		 placeholder
+
+		 name
+
+		 value Определяет текст, отображаемый на кнопке, в поле или связанный текст. Не указывается для полей типа file.
+
+	-картинки
+
+		приоритетом вставлять через css
+
+		https://shwr.me
+
+		https://html5book.ru/css-background/
+
+		<label class="file-default file-default_photo">
+			<input class="file-default__input" type="file" name="photo[]">
+			<div class="file-default__display">Загрузить фотографии с&nbsp;компьютера</div>
+		</label>
+		.main-form__uploaded-file-name_photo {
+		    background: url(../img/theme/icons/photo-camera_default.svg) no-repeat center left;  //без повтора по центру по вертикали слева по горизонтали
+		    background-size: 1rem; //размер svg
+		    //  div {background-size: 300px 150px;}
+				div {background-size: 50% 30%;}
+				div {background-size: cover;}
+				div {background-size: contain;}
+		} //для иконок которые не требуется менять в CMS
+
+		&_fb {
+	        background-image: url(../img/theme/socials/fb.svg);
+      	} Иконка фейсбкука
+
+		& .slick-prev:before {
+		    position: absolute;
+		    content: '\f053';
+		    display: block;
+		    font-family: $icons-font;
+		    top: 10px;
+		    left: 45px;
+		    @include responsive-font-size(35px);
+		    cursor: pointer;
+		    color: red;
+		  } //fontawesome
+
+	  	.album-gallery .image-wrap {
+		    object-fit: cover;
+		    object-position: center;
+		    height: 100%;
+		    max-height: 82px;
+		}  //картинка
+		.album-gallery .image-wrap {
+		    height: 171px;
+		    flex: 0 0 33.33333%;
+		    max-width: 33.33333%;
+		    position: relative;
+		    width: 100%;
+		    min-height: 1px;
+		}//родитель  - просто пример
+
+
+		figure
+		    flex: 0 0 30%;
+		    position: relative
+	    a
+		    position: absolute;
+		    left: 0;
+		    top: 0;
+		    width: 100%;
+		    height: auto;
+		    display: block;
+	    img
+	    	width: 100%;
+	    	height: 100%;
+		div
+			//pr30px отступ влево если карточка горизоньальная
+			http://union.acommandpro.com - карточка товара через тег img
+
+
+		<figure class="public__img-block">
+	        <div class="public__img" style="background-image: url(img/content/public/bread.png)"></div>
+	    </figure>
+	    figure {
+		    position: relative;
+		    display: block;
+		    height: 12.5rem;
+	    }
+	    .public__img {
+		    border-top-left-radius: 2rem;
+		    border-top-right-radius: 2rem;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    //height: 100%
+		    background-repeat: no-repeat;
+		    background-position: center top;
+		    background-size: cover;
+		} -приоритет верстать так
+		https://basik.ru/images/1920x1080_63/16_1920x1080.jpg
+		http://top-desktop.ru/files/priroda/1024/97.jpg
+
+
+		-еще как вариант без абсолютного позиционирования  - крайний случай для долбоебов бэкэндов
+			<div class="main-page-popular-program__img-container">
+                <img class="main-page-popular-program__img" src="http://top-desktop.ru/files/priroda/1024/97.jpg" alt="Edinburgh SRUC Oatridge Campus">
+            </div>
+            .main-page-popular-program__img-container {
+			    position: relative;
+			    margin-bottom: 1.125rem;
+			    max-height: 152px;
+			    overflow: hidden;
+			}
+
+
+	-absolute
+		transform: translateX(-50%);
+		transform: translate(50%, 50%);
+
+	-text-align:center
+		выравнивает контент внутри блока по центру
+	-margin 0 auto выравнивает блок с контентов по центру
+
+	-масонри сетка
+		https://zaurmag.ru/javascript-jquery/masonry-kirpichnyj-effekt-elementov-na-sajte-dokumentatsiya-na-russkom-yazyke.html
+
+	-bootstrap
+
+		bs3 x<767 - xs; 768<x<991 sm; 991<x<1199 - md; x>1200 - lg;
+		bs4 x<576 - col; 576<=x<=767 sm; 768<=x<=991 - md; 992<=x<=1199 - lg; x>=1200 -xl;
+
+		.col-lg-4.col-sm-6.order-lg-1.order-sm-2.order-3 //порядок
+		.order-lg-last
+
+		.container {
+		    width: 100%;
+		    padding-right: 15px;
+		    padding-left: 15px;
+		    margin-right: auto;
+		    margin-left: auto;
+		    max-width: 1200px;
+		}
+		.row {
+		    display: flex;
+		    flex-wrap: wrap;
+		    margin-right: -15px;
+		    margin-left: -15px;
+		}
+		.col-6 {
+		    -ms-flex: 0 0 50%;
+		    flex: 0 0 50%;
+		    max-width: 50%;
+	        position: relative;
+		    width: 100%;
+		    min-height: 1px;
+		    padding-right: 15px;
+		    padding-left: 15px;
+		}
+
+		<div class="col-lg-2 order-lg-last"> делает эту колонку последней внутри row в дом дереве
+		<div class="col-lg-10">
+
+	-flex
+		flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+		https://www.youtube.com/watch?v=38bMnJ2l4bg
+		https://www.youtube.com/watch?v=hrFPD0nkRVA
+
+		align-self – выравнивание отдельно взятого flex-блока по поперечной оси (виртикали),хотя у остальных блоков о родителя могут быть заданы другие свойства
+
+		Ширина flex-basis равна и заменяет свойство width
+			flex-basis:20%; аналогично width: 20% можно использовать без наличия у самого элемента свойства display flex и обязательно наличие df у родитетя!!! при этом задать карточке внешний margin а родителю повесить jcsa
+
+		порядок
+			.flex-item {
+				-webkit-order: 1;
+				order: 1; //прописать всем блокам от родителя
+			}
+
+		Жадность
+			flex-grow: 2; //будет больше чем остальные блоки а остальным прописать 1
+			по умолчанию все карточки товара имеют flex-grow: 0 и если одной из карточек дать flex-grow: 1 то она займет все пространство свободное и оттеснит к правому краю остальные карточки
+			пространство делится на 6 и 1 1 3 1 = 1\6 1\6 3\6 1\6 обязательно указать flex basis в пикселях или процентах и тогда норм будет ) https://youtu.be/hrFPD0nkRVA?t=3900
+			чтобы соскочивший элемент не был на всю ширину нужно поставить flex-grow: 0; и родителю jcc
+			попробовать для карточки вместо flex-basis - min width
+
+		stretch когда один из блоков по горизонтали имеет больше контента чем его соседи то позволяет вытянуть соседей по высоте по нему
+
+	-Селекторы
+		https://code.tutsplus.com/ru/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+		Контекстные
+			li a {
+				text-decoration: none;
+			}
+
+		Псевдо
+			a:link { color: red; }
+			a:visted { color: purple; }
+
+		Соседний элемент следующий сразу за указанным элементом
+			ul + p {
+			 	color: red;
+			}
+
+		Прямой потомок
+			div#container > ul {
+				border: 1px solid black;
+			}
+
+		ul ~ p {
+			 color: red;
+		}
+		Этот селектор похож на X + Y, но он менее строгий. Соседний селектор (ul + p) выберет только первый элемент, следующий сразу же за указанным элементом. Селектор X ~ Y выберет все элементы p, расположенные после элемента ul.
+
+		Это селектор атрибутов. Он выберет только те ссылки, у которых имеется указанный атрибут title
+		a[title] {
+		 	color: green;
+		}
+
+		Отмеченный чекбокс
+		.checkbox-default__input:checked ~ .checkbox-default__display:before {
+		    background: #ff440e;
+		    border-color: #ff440e;
+		}
+
+
+		<label class="check option">
+			<input class="check__input" type="checkbox" checked>
+			<span class="check__box"></span>
+			Второй
+		</label>
+		.check__box {
+			position: absolute;
+			margin-left: -1.2em;
+			width: 1em;
+			height: 1em;
+			background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Foff.svg?1550563355034);
+		}
+		.check__input {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			clip: rect(0 0 0 0);
+		}
+		.check {
+			padding-left: 1.2em;
+		}
+		/* Checked */
+
+		.check__input:checked + .check__box {
+			background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Fon.svg?1550563355439);
+		}
+		/* Focused */
+		.check__input:focus + .check__box {
+			background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Foff-focused.svg?1550563355021);
+		}
+		.check__input:checked:focus + .check__box {
+			background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Fon-focused.svg?1550563355063);
+		}
+		/* Disabled */
+		.check__input:disabled + .check__box {
+			background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Foff-disabled.svg?1550563354916);
+		}
+		.check__input:checked:disabled + .check__box {
+			background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Fon-disabled.svg?1550563354883);
+		}
+
+
+		Псевдокласс отрицания бывает очень полезен. Представьте, что вам нужно выбрать все тэги div, кроме одного с id равным container
+		div:not(#container) {
+			 color: blue;
+		}
+
+		Выберем первую букву параграфа
+			p::first-letter {
+			 float: left;
+			 font-size: 2em;
+			 font-weight: bold;
+			 font-family: cursive;
+			 padding-right: 2px;
+		}
