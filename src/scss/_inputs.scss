@@ -2,25 +2,25 @@
   display: block;
   width: 100%;
   max-width: 100%;
-  padding: .5rem .75rem;
+  padding: 1.125rem 2.0625rem;
   background: $white;
-  border: 1px solid $border-default-color;
-  border-radius: $border-radius-default;
-  font: 400 .875rem/1.25rem $font-main;
-  color: #000;
+  //border: 1px solid $border-default-color;
+  border-radius: $bor-rad-inpt;
+  font: 500 .875rem/1.25rem $font-main;
+  color: $text;
 
   &::placeholder {
     opacity: 1;
-    font: 500 0.75rem/1.125rem $font-main;
-    color: #000;
+    font: 400 0.875rem/1.5rem $font-main;
+    color: #a3a3a3;
   }
   &:hover {
     transition: $transition-default;
-    border-color: red;
+    border-color: $link-color;
   }
   &:focus {
     transition: $transition-default;
-    border-color: red;
+    border-color: $link-color;
   }
 }
 

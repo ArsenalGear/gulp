@@ -12,8 +12,8 @@ body {
   padding: 0;
   background: $white;
   font-family: $font-main, Arial, sans-serif;
-  line-height: 1.125rem;
-  font-size: 1rem;
+  line-height: 1.75rem;
+  font-size: 0.875rem;
   font-weight: 400;
   color: $black;
 }
@@ -63,12 +63,12 @@ textarea {
 
 a {
   color: $link-color;
-  text-decoration: none;
+  text-decoration: underline;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    color: #0059e2;
+    color: $link-color;
     text-decoration: none;
     transition: $transition-default;
     opacity: 0.9;

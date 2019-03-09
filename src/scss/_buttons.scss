@@ -2,19 +2,44 @@
   position: relative;
   overflow: hidden;
   display: inline-block;
-  padding: 0 .938rem;
-  border: 0;
-  border-radius: $border-radius-default;
+  padding: 0 1rem;
+  border-radius: $bor-rad-btn;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   white-space: nowrap;
   text-overflow: ellipsis;
   cursor: pointer;
   transition: $transition-default;
+  font: 500 0.6875rem/2.4375rem $font-main;
+  letter-spacing: 1.1px;
 
   &:hover,
   &:focus {
     text-decoration: none;
+  }
+
+  &-green {
+    background-color: $btn-light-green;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $btn-dark-green;
+      color: $white;
+    }
+  }
+
+  &-orange {
+    background-color: $btn-light-green;
+    color: $text;
+    border: 2px solid $btn-orange;
+
+    &:hover,
+    &:focus {
+      background-color: $btn-orange;
+      color: $white;
+    }
   }
 }
 

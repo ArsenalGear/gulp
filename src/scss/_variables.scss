@@ -2,16 +2,20 @@
 $white: white;
 $black: #222328;
 
-$link-color: #0059e2;
+$link-color:  #1c1e23;
+
+// Button-color
+$btn-light-green: #74b92b;
+$btn-dark-green: #4f8a10;
+$btn-orange: #ef9d08;
 
 // Backgrounds colors
-$bg-light-color: $white;
+$bg-light-color: #efefef;
 
 // Borders colors
-$border-default-color: #b3b3b3;
 
 // Texts colors
-$black: #222328;
+$text: #222328;
 
 // Fonts
 $icons-font-regular: 'FontAwesome Solid';
@@ -81,10 +85,12 @@ $font-main: Roboto, sans-serif;
 }
 
 // box-shadow
-$box-shadow-default: 0 0 .5rem 0 rgba($black,.3);
+//$box-shadow-default: 0 0 .5rem 0 rgba($black,.3);
 
 // border-radius
 $border-radius-default: 0;
+$bor-rad-btn: 1.1875rem;
+$bor-rad-inpt: 1.625rem;
 
 // Animations by CSS 3
 $transition-default: all .33s;
