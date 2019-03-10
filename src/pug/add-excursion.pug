@@ -10,71 +10,71 @@ block breadcrumbs
 block content
     .container
         +b('h1').page-title Добавить экскурсию
-    +b('div').page-body
-        .container
-            .row
-                .col-lg-2.order-lg-last
-                    +b('div').form-sidebar
-                        +e('ul').list
-                            +e('li').item.active
-                                +e('a').link(href='#section-basic-information') Основная информация
-                .col-lg-10
-                    +b('form').main-form#add-excursion-form(action='#')
-                        +e('div').section#section-basic-information
-                            +e('p').section-title Основная информация
-                            .row
-                                .col-lg-6
-                                    +e('div').input-container
-                                        +e('p').input-title Название экскурсии
-                                        +e('p').input-desc Введите название для экскурсии
-                                        +b('input').input-default(type='text', name='name', placeholder='Например: Музей Гарри Поттера', required='required')
-                                    +e('div').input-container
-                                        +e('p').input-title Стоимость одного билета
-                                        +e('p').input-desc Укажите стоимость для одного участника группы
-                                        +e('div').input-group
-                                            +b('input').input-default(type='number', name='currency-value', placeholder='750')
-                                            +b('div').select-default_no-icon
-                                                +e('select').select_usual(name='currency-type')
-                                                    +e('option')(value='0') Российских рублей
-                                                    +e('option')(value='1') USD
-                                                    +e('option')(value='2') EUR
-                                    +e('div').input-container
-                                        +e('p').input-title Описание экскурсии
-                                        +e('p').input-desc Кратко опишите экскурсию
-                                        +b('textarea').textarea-default(name='description', placeholder='Например: Наша школа - это частное международное высшее учебное заведение. Czech College является одним из авторитетных международных колледжей, который находится в Праге, столице Чехии. Прага — удивительный старинный город с невероятной архитектурой, гостеприимными людьми.')
-                                    +e('div').input-container
-                                        +e('p').input-title Создать экскурсию
-                                        +e('p').input-desc Нажмите на кнопку и после проверки экскурсия добавиться в список
-                                        +e('input').submit.button_default(type='submit', value='Добавить экскурсию')
-                                .col-lg-6
-                                    +e('div').input-container
-                                        +e('p').input-title Адрес экскурсии
-                                        +e('p').input-desc Укажите место, в котором будет проходить экскурсия
-                                        +b('input').input-default_mark(type='text', name='address', placeholder='ул. Пушкина д. Колотушкина', required='required')
-                                    +e('div').map
-                                        img(src='./img/content/map.jpg', alt='Карта')
-                                    +e('div').input-container
-                                        +e('p').input-title Фотографии школы
-                                        +e('p').input-desc Рекомендуем добавить 17 фото (минимум 5). Размер 500х500 px.
-                                        +b('label').file-default_photo
-                                            +e('input').input(type='file', name='photo[]')
-                                            +e('div').display Загрузить фотографии с компьютера
-                                        +e('div').uploaded-files
-                                            +e('div').uploaded-file
-                                                +e('p').uploaded-file-name_photo фасадздания.jpeg
-                                                +e('button').uploaded-file-button(type='button') Удалить фотографию
-                                            +e('div').uploaded-file
-                                                +e('p').uploaded-file-name_photo учителя.jpeg
-                                                +e('button').uploaded-file-button(type='button') Удалить фотографию
-                                            +e('div').uploaded-file
-                                                +e('p').uploaded-file-name_photo программа_спорт.jpeg
-                                                +e('button').uploaded-file-button(type='button') Удалить фотографию
-                                            +e('div').uploaded-file
-                                                +e('p').uploaded-file-name_photo май2018гудбай.jpeg
-                                                +e('button').uploaded-file-button(type='button') Удалить фотографию
-                                            +e('div').uploaded-file
-                                                +e('p').uploaded-file-name_photo физкультура_фото.jpeg
-                                                +e('button').uploaded-file-button(type='button') Удалить фотографию
-                                            +e('div').uploaded-file
-                                                +e('p').uploaded-file-name_photo минифотошкола.jpeg
-                                                +e('button').uploaded-file-button(type='button') Удалить фотографию
+    //+b('div').page-body
+    //    .container
+    //        .row
+    //            .col-lg-2.order-lg-last
+    //                +b('div').form-sidebar
+    //                    +e('ul').list
+    //                        +e('li').item.active
+    //                            +e('a').link(href='#section-basic-information') Основная информация
+    //            .col-lg-10
+    //                +b('form').main-form#add-excursion-form(action='#')
+    //                    +e('div').section#section-basic-information
+    //                        +e('p').section-title Основная информация
+    //                        .row
+    //                            .col-lg-6
+    //                                +e('div').input-container
+    //                                    +e('p').input-title Название экскурсии
+    //                                    +e('p').input-desc Введите название для экскурсии
+    //                                    +b('input').input-default(type='text', name='name', placeholder='Например: Музей Гарри Поттера', required='required')
+    //                                +e('div').input-container
+    //                                    +e('p').input-title Стоимость одного билета
+    //                                    +e('p').input-desc Укажите стоимость для одного участника группы
+    //                                    +e('div').input-group
+    //                                        +b('input').input-default(type='number', name='currency-value', placeholder='750')
+    //                                        +b('div').select-default_no-icon
+    //                                            +e('select').select_usual(name='currency-type')
+    //                                                +e('option')(value='0') Российских рублей
+    //                                                +e('option')(value='1') USD
+    //                                                +e('option')(value='2') EUR
+    //                                +e('div').input-container
+    //                                    +e('p').input-title Описание экскурсии
+    //                                    +e('p').input-desc Кратко опишите экскурсию
+    //                                    +b('textarea').textarea-default(name='description', placeholder='Например: Наша школа - это частное международное высшее учебное заведение. Czech College является одним из авторитетных международных колледжей, который находится в Праге, столице Чехии. Прага — удивительный старинный город с невероятной архитектурой, гостеприимными людьми.')
+    //                                +e('div').input-container
+    //                                    +e('p').input-title Создать экскурсию
+    //                                    +e('p').input-desc Нажмите на кнопку и после проверки экскурсия добавиться в список
+    //                                    +e('input').submit.button_default(type='submit', value='Добавить экскурсию')
+    //                            .col-lg-6
+    //                                +e('div').input-container
+    //                                    +e('p').input-title Адрес экскурсии
+    //                                    +e('p').input-desc Укажите место, в котором будет проходить экскурсия
+    //                                    +b('input').input-default_mark(type='text', name='address', placeholder='ул. Пушкина д. Колотушкина', required='required')
+    //                                +e('div').map
+    //                                    img(src='./img/content/map.jpg', alt='Карта')
+    //                                +e('div').input-container
+    //                                    +e('p').input-title Фотографии школы
+    //                                    +e('p').input-desc Рекомендуем добавить 17 фото (минимум 5). Размер 500х500 px.
+    //                                    +b('label').file-default_photo
+    //                                        +e('input').input(type='file', name='photo[]')
+    //                                        +e('div').display Загрузить фотографии с компьютера
+    //                                    +e('div').uploaded-files
+    //                                        +e('div').uploaded-file
+    //                                            +e('p').uploaded-file-name_photo фасадздания.jpeg
+    //                                            +e('button').uploaded-file-button(type='button') Удалить фотографию
+    //                                        +e('div').uploaded-file
+    //                                            +e('p').uploaded-file-name_photo учителя.jpeg
+    //                                            +e('button').uploaded-file-button(type='button') Удалить фотографию
+    //                                        +e('div').uploaded-file
+    //                                            +e('p').uploaded-file-name_photo программа_спорт.jpeg
+    //                                            +e('button').uploaded-file-button(type='button') Удалить фотографию
+    //                                        +e('div').uploaded-file
+    //                                            +e('p').uploaded-file-name_photo май2018гудбай.jpeg
+    //                                            +e('button').uploaded-file-button(type='button') Удалить фотографию
+    //                                        +e('div').uploaded-file
+    //                                            +e('p').uploaded-file-name_photo физкультура_фото.jpeg
+    //                                            +e('button').uploaded-file-button(type='button') Удалить фотографию
+    //                                        +e('div').uploaded-file
+    //                                            +e('p').uploaded-file-name_photo минифотошкола.jpeg
+    //                                            +e('button').uploaded-file-button(type='button') Удалить фотографию

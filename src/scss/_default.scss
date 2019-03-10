@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   //outline: 0;
+  letter-spacing: 0.5px;
 }
 
 html {
@@ -22,8 +23,13 @@ main {
   min-height: 100vh;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 3.5px;
+}
+
 p {
   font: inherit;
+  letter-spacing: 1.43px;
 }
 
 b, strong {
@@ -65,6 +71,7 @@ a {
   color: $link-color;
   text-decoration: underline;
   cursor: pointer;
+  font: 700 0.875rem/1.125rem $font-main;
 
   &:hover,
   &:focus {

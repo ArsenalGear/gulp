@@ -16,47 +16,35 @@ $bg-light-color: #efefef;
 
 // Texts colors
 $text: #222328;
+$text-grey: #bcbcbc;
 
 // Fonts
 $icons-font-regular: 'FontAwesome Solid';
 $icons-font-solid: 'FontAwesome Solid';
 $icons-font-brands: 'FontAwesome Brands';
-$font-main: Roboto, sans-serif;
-
-//Roboto
+$font-main: Montserrat, sans-serif;
 
 @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), url('../fonts/roboto/Robotothin.woff2') format('woff2'), url('../fonts/roboto/Robotothin.woff') format('woff'), url('../fonts/roboto/Robotothin.ttf') format('truetype');
-  src: url('../fonts/roboto/Robotothin.ttf');
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), url('../fonts/roboto/Robotolight.woff2') format('woff2'), url('../fonts/roboto/Robotolight.woff') format('woff'), url('../fonts/roboto/Robotolight.ttf') format('truetype');
-  src: url('../fonts/roboto/Robotolight.ttf');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), url('../fonts/roboto/Roboto.woff2') format('woff2'), url('../fonts/roboto/Roboto.woff') format('woff'), url('../fonts/roboto/Roboto.ttf') format('truetype');
-  src: url('../fonts/roboto/Roboto.ttf');
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url('../fonts/Montserrat/montserrat.woff2') format('woff2'), url('../fonts/Montserrat/montserrat.woff') format('woff'), url('../fonts/Montserrat/montserrat.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), url('../fonts/roboto/Robotomedium.woff2') format('woff2'), url('../fonts/roboto/Robotomedium.woff') format('woff'), url('../fonts/roboto/Robotomedium.ttf') format('truetype');
-  src: url('../fonts/roboto/Robotomedium.ttf');
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url('../fonts/montserrat/montserrat-v12-latin-500.woff2') format('woff2'), url('../fonts/montserrat/montserrat-v12-latin-500.woff') format('woff'), url('../fonts/montserrat/montserrat-v12-latin-500.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Roboto';
-  src: local('Roboto'), url('../fonts/roboto/Robotobold.woff2') format('woff2'), url('../fonts/roboto/Robotobold.woff') format('woff'), url('../fonts/roboto/Robotobold.ttf') format('truetype');
-  src: url('../fonts/roboto/Robotobold.ttf');
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url('../fonts/montserrat/montserrat-v12-latin-600.woff2') format('woff2'), url('../fonts/montserrat/montserrat-v12-latin-600.woff') format('woff'), url('../fonts/montserrat/montserrat-v12-latin-600.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url('../fonts/Montserrat/montserrat.woff2') format('woff2'), url('../fonts/Montserrat/montserrat.woff') format('woff'), url('../fonts/Montserrat/montserrat.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
@@ -64,21 +52,18 @@ $font-main: Roboto, sans-serif;
 //Icons font
 @font-face {
   font-family: 'FontAwesome Regular';
-  src: url('../fonts/fontawesome/fa-regular-400.eot');
   src: url('../fonts/fontawesome/fa-regular-400.eot') format('embedded-opentype'), url('../fonts/fontawesome/fa-regular-400.woff2') format('woff2'), url('../fonts/fontawesome/fa-regular-400.woff') format('woff'), url('../fonts/fontawesome/fa-regular-400.ttf') format('truetype'), url('../fonts/fontawesome/fa-regular-400.svg#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'FontAwesome Solid';
-  src: url('../fonts/fontawesome/fa-solid-900.eot');
   src: url('../fonts/fontawesome/fa-solid-900.eot') format('embedded-opentype'), url('../fonts/fontawesome/fa-solid-900.woff2') format('woff2'), url('../fonts/fontawesome/fa-solid-900.woff') format('woff'), url('../fonts/fontawesome/fa-solid-900.ttf') format('truetype'), url('../fonts/fontawesome/fa-solid-900.svg#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'FontAwesome Brands';
-  src: url('../fonts/fontawesome/fa-brands-400.eot');
   src: url('../fonts/fontawesome/fa-brands-400.eot') format('embedded-opentype'), url('../fonts/fontawesome/fa-brands-400.woff2') format('woff2'), url('../fonts/fontawesome/fa-brands-400.woff') format('woff'), url('../fonts/fontawesome/fa-brands-400.ttf') format('truetype'), url('../fonts/fontawesome/fa-brands-400.svg#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
@@ -90,6 +75,7 @@ $font-main: Roboto, sans-serif;
 // border-radius
 $border-radius-default: 0;
 $bor-rad-btn: 1.1875rem;
+$bor-rad-btn-mini: 	0.8125rem;
 $bor-rad-inpt: 1.625rem;
 
 // Animations by CSS 3
