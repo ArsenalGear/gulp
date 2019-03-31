@@ -33,8 +33,12 @@
     <div class="breadcrumbs">
         <div class="container">
             <ol class="breadcrumbs__list">
-                <li class="breadcrumbs__item"><a href="#">Личный кабинет менеджера</a></li>
-                <li class="breadcrumbs__item"><a href="#">Дополнительные экскурсии</a></li>
+                <li class="breadcrumbs__item">
+                    <a href="#">Личный кабинет менеджера</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="#">Дополнительные экскурсии</a>
+                </li>
                 <li class="breadcrumbs__item">Добавить экскурсию</li>
             </ol>
         </div>
@@ -43,98 +47,32 @@
         <div class="container">
             <h1 class="page-title">Добавить экскурсию</h1>
         </div>
-        <div class="page-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-2 order-lg-last">
-                        <div class="form-sidebar">
-                            <ul class="form-sidebar__list">
-                                <li class="form-sidebar__item active"><a class="form-sidebar__link" href="#section-basic-information">Основная информация</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-10">
-                        <form class="main-form" id="add-excursion-form" action="#">
-                            <div class="main-form__section" id="section-basic-information">
-                                <p class="main-form__section-title">Основная информация</p>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="main-form__input-container">
-                                            <p class="main-form__input-title">Название экскурсии</p>
-                                            <p class="main-form__input-desc">Введите название для экскурсии</p><input class="input-default" type="text" name="name" placeholder="Например: Музей Гарри Поттера" required="required" /></div>
-                                        <div class="main-form__input-container">
-                                            <p class="main-form__input-title">Стоимость одного билета</p>
-                                            <p class="main-form__input-desc">Укажите стоимость для одного участника группы</p>
-                                            <div class="main-form__input-group"><input class="input-default" type="number" name="currency-value" placeholder="750" />
-                                                <div class="select-default select-default_no-icon"><select class="select-default__select select-default__select_usual" name="currency-type"><option value="0">Российских рублей</option><option value="1">USD</option><option value="2">EUR</option></select></div>
-                                            </div>
-                                        </div>
-                                        <div class="main-form__input-container">
-                                            <p class="main-form__input-title">Описание экскурсии</p>
-                                            <p class="main-form__input-desc">Кратко опишите экскурсию</p><textarea class="textarea-default" name="description" placeholder="Например: Наша школа - это частное международное высшее учебное заведение. Czech College является одним из авторитетных международных колледжей, который находится в Праге, столице Чехии. Прага — удивительный старинный город с невероятной архитектурой, гостеприимными людьми."></textarea></div>
-                                        <div
-                                            class="main-form__input-container">
-                                            <p class="main-form__input-title">Создать экскурсию</p>
-                                            <p class="main-form__input-desc">Нажмите на кнопку и после проверки экскурсия добавиться в список</p><input class="main-form__submit button button_default" type="submit" value="Добавить экскурсию" /></div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="main-form__input-container">
-                                        <p class="main-form__input-title">Адрес экскурсии</p>
-                                        <p class="main-form__input-desc">Укажите место, в котором будет проходить экскурсия</p><input class="input-default input-default_mark" type="text" name="address" placeholder="ул. Пушкина д. Колотушкина" required="required" /></div>
-                                    <div class="main-form__map"><img src="./img/content/map.jpg" alt="Карта"></div>
-                                    <div class="main-form__input-container">
-                                        <p class="main-form__input-title">Фотографии школы</p>
-                                        <p class="main-form__input-desc">Рекомендуем добавить 17 фото (минимум 5). Размер 500×500 px.</p><label class="file-default file-default_photo"><input class="file-default__input" type="file" name="photo[]"/><div class="file-default__display">Загрузить фотографии с компьютера</div></label>
-                                        <div
-                                            class="main-form__uploaded-files">
-                                            <div class="main-form__uploaded-file">
-                                                <p class="main-form__uploaded-file-name main-form__uploaded-file-name_photo">фасадздания.jpeg</p><button class="main-form__uploaded-file-button" type="button">Удалить фотографию</button></div>
-                                            <div class="main-form__uploaded-file">
-                                                <p class="main-form__uploaded-file-name main-form__uploaded-file-name_photo">учителя.jpeg</p><button class="main-form__uploaded-file-button" type="button">Удалить фотографию</button></div>
-                                            <div class="main-form__uploaded-file">
-                                                <p class="main-form__uploaded-file-name main-form__uploaded-file-name_photo">программа_спорт.jpeg</p><button class="main-form__uploaded-file-button" type="button">Удалить фотографию</button></div>
-                                            <div class="main-form__uploaded-file">
-                                                <p class="main-form__uploaded-file-name main-form__uploaded-file-name_photo">май2018гудбай.jpeg</p><button class="main-form__uploaded-file-button" type="button">Удалить фотографию</button></div>
-                                            <div class="main-form__uploaded-file">
-                                                <p class="main-form__uploaded-file-name main-form__uploaded-file-name_photo">физкультура_фото.jpeg</p><button class="main-form__uploaded-file-button" type="button">Удалить фотографию</button></div>
-                                            <div class="main-form__uploaded-file">
-                                                <p class="main-form__uploaded-file-name main-form__uploaded-file-name_photo">минифотошкола.jpeg</p><button class="main-form__uploaded-file-button" type="button">Удалить фотографию</button></div>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                </form>
-            </div>
-        </div>
-        </div>
-        </div>
     </main>
     <div class="footer">
         <div class="container">
-            <div class="footer__info-blocks">
-                <div class="row">
-                    <div class="col-lg-5 order-lg-2 order-sm-1 order-2">
-                        <ul class="footer__additional-menu">
-                            <li class="footer__additional-menu-item"><a class="footer__additional-menu-link" href="#">Условия использования</a></li>
-                            <li class="footer__additional-menu-item"><a class="footer__additional-menu-link" href="#">Политика конфиденциальности</a></li>
-                            <li class="footer__additional-menu-item"><a class="footer__additional-menu-link" href="#">Карта сайта</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 order-lg-1 order-sm-2 order-3">
-                        <p class="footer__copyright">TravelClass© 2018. Все права защищены</p>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 order-lg-3 order-sm-3 order-1">
-                        <div class="footer__callback"><a class="footer__phone" href="tel:+78001111111">8-800-770-78-37</a><a class="footer__free-call" href="#">Бесплатный звонок</a></div>
-                    </div>
-                </div>
-            </div>
+            <!--+e('div').info-blocks-->
+            <!--    .row-->
+            <!--        .col-lg-5.order-lg-2.order-sm-1.order-2-->
+            <!--            +e('ul').additional-menu-->
+            <!--                +e('li').additional-menu-item-->
+            <!--                    +e('a').additional-menu-link(href='#') Условия использования-->
+            <!--                +e('li').additional-menu-item-->
+            <!--                    +e('a').additional-menu-link(href='#') Политика конфиденциальности-->
+            <!--                +e('li').additional-menu-item-->
+            <!--                    +e('a').additional-menu-link(href='#') Карта сайта-->
+            <!--        .col-lg-4.col-sm-6.order-lg-1.order-sm-2.order-3-->
+            <!--            +e('p').copyright TravelClass© 2018. Все права защищены-->
+            <!--        .col-lg-3.col-sm-6.order-lg-3.order-sm-3.order-1-->
+            <!--            +e('div').callback-->
+            <!--                +e('a').phone(href='tel:' + tel)= phone-->
+            <!--                +e('a').free-call(href='#') Бесплатный звонок-->
         </div>
     </div>
-    <form class="popup white-popup-block mfp-hide" id="add-video-modal" autocomplete="off">
-        <p class="popup__title">Добавить ссылку на видеоролик</p>
-        <p class="popup__desc">Добавьте ссылку на видео о школе, источники: youtube, vimeo</p><input class="input-default input-default_video" type="text" name="video" placeholder="Например: https://www.youtube.com/watch?v=SkgTxQm9DWM" required="required" /><input class="popup__submit button button_default"
-            type="submit" value="Добавить видео" /></form>
+    <!--+b('form')#add-video-modal.popup.white-popup-block.mfp-hide(autocomplete='off')-->
+    <!--    +e('p').title Добавить ссылку на видеоролик-->
+    <!--    +e('p').desc Добавьте ссылку на видео о школе, источники: youtube, vimeo-->
+    <!--    +b('input').input-default_video(type='text', name='video', placeholder='Например: https://www.youtube.com/watch?v=SkgTxQm9DWM', required='required')-->
+    <!--    +e('input').submit.button_default(type='submit', value='Добавить видео')-->
 </body>
 
 </html>

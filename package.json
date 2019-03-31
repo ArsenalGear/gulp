@@ -1,7 +1,7 @@
 {
-  "name": "calc",
+  "name": "Project",
   "version": "1.0.0",
-  "description": "Gulp skeleton",
+  "description": "Gulp",
   "author": "Fly Code",
   "license": "ISC",
   "devDependencies": {

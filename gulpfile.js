@@ -21,7 +21,16 @@ gulp.task('pug', function () {
             errorHandler: notify.onError()
         }))
         .pipe(pug())
-        .pipe(htmlbeautify({indentSize: 2}))
+        .pipe(htmlbeautify({
+            indentSize: 2,
+            unformatted: [
+                'abbr', 'area', 'b', 'bdi', 'bdo', 'br', 'cite',
+                'code', 'data', 'datalist', 'del', 'dfn', 'em', 'embed', 'i', 'ins', 'kbd', 'keygen', 'map', 'mark', 'math', 'meter', 'noscript',
+                'object', 'output', 'progress', 'q', 'ruby', 's', 'samp', 'small',
+                'strong', 'sub', 'sup', 'template', 'time', 'u', 'var', 'wbr', 'text',
+                'acronym', 'address', 'big', 'dt', 'ins', 'strike', 'tt'
+            ]
+        }))
 		.pipe(typograf({ locale: ['ru', 'en-US'] }))
         .pipe(gulp.dest('src'))
 });
@@ -40,13 +49,18 @@ gulp.task('js-libs', function () {
         // 'node_modules/tether/dist/js/tether.js',
         // 'node_modules/bootstrap/dist/js/bootstrap.js',
         // 'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
+        // 'node_modules/jquery.scrollbar/jquery.scrollbar.js',
         'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
 		// 'node_modules/jquery-ui/ui/widgets/datepicker.js',
 		// 'node_modules/jquery-ui/ui/widgets/slider.js',
 		// 'node_modules/jquery-ui/ui/i18n/datepicker-ru.js',
+        // './src/libs/share42.custom/share42.custom.min.js',
+        // './src/libs/jquery-ui-1.12.1.custom/jquery-ui.js', //datepicker + slider
 		// 'node_modules/timepicker/jquery.timepicker.js',
         // 'node_modules/select2/dist/js/select2.full.js',
+        // 'node_modules/jquery-ui-touch-punch/jquery.ui.touch-punch.js',
         // 'node_modules/select2/dist/js/i18n/ru.js',
+        'node_modules/select2/dist/js/i18n/ru.js',
         'node_modules/slick-carousel/slick/slick.js'
     ])
         .pipe(concat('libs.min.js'))
@@ -57,6 +71,8 @@ gulp.task('js-libs', function () {
 gulp.task('css-libs', function () {
     return gulp.src([
         'node_modules/bootstrap/dist/css/bootstrap-grid.css',
+        // 'node_modules/jquery.scrollbar/jquery.scrollbar.css',
+        // './src/libs/jquery-ui-1.12.1.custom/jquery-ui.css', //datepicker + slider
         'node_modules/magnific-popup/dist/magnific-popup.css',
         // 'node_modules/jquery-ui/themes/base/datepicker.css',
         // 'node_modules/jquery-ui/themes/base/slider.css',
@@ -102,7 +118,7 @@ gulp.task('img', function () {
 gulp.task('watch', ['browser-sync', 'pug', 'scss', 'css-libs', 'js-libs'], function () {
     gulp.watch('src/scss/**/*.+(sass|scss)', ['scss']);
     gulp.watch('src/**/*.pug', ['pug']);
-    gulp.watch('src/css/*.css', browserSync.reload);
+    // gulp.watch('src/css/*.css', browserSync.reload);
     gulp.watch('src/*.html', browserSync.reload);
     gulp.watch('src/js/**/*.js', browserSync.reload);
 });

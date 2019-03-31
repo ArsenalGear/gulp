@@ -2,7 +2,10 @@
 $white: white;
 $black: #222328;
 
-$link-color:  #1c1e23;
+//
+$success-color: #8dc63f;
+$warning-color: #b8b900;
+$error-color: #ff3743;
 
 // Button-color
 $btn-light-green: #74b92b;
@@ -11,12 +14,17 @@ $btn-orange: #ef9d08;
 
 // Backgrounds colors
 $bg-light-color: #efefef;
+$bg-main-color: $white;
 
 // Borders colors
+$border-main-color: #e5e5e5;
+$border-light-color: $white;
 
 // Texts colors
 $text: #222328;
-$text-grey: #bcbcbc;
+$text-placeholder-color: #c5c5c5;
+$text-light-color: $white;
+$link-color:  blue;
 
 // Fonts
 $icons-font-regular: 'FontAwesome Solid';
@@ -70,10 +78,10 @@ $font-main: Montserrat, sans-serif;
 }
 
 // box-shadow
-//$box-shadow-default: 0 0 .5rem 0 rgba($black,.3);
+$box-shadow-default: 0 0 .25rem 0 rgba($black,.12);
 
 // border-radius
-$border-radius-default: 0;
+$border-radius-default: .188rem;
 $bor-rad-btn: 1.1875rem;
 $bor-rad-btn-mini: 	0.8125rem;
 $bor-rad-inpt: 1.625rem;

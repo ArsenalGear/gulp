@@ -31,37 +31,37 @@
 <body>
     <header class="header" id="header"></header>
     <main>
-        <article class="main-page">
+        <header class="main-page">
             <div class="container">
                 <div class="row"></div>
             </div>
-        </article>
+        </header>
     </main>
     <div class="footer">
         <div class="container">
-            <div class="footer__info-blocks">
-                <div class="row">
-                    <div class="col-lg-5 order-lg-2 order-sm-1 order-2">
-                        <ul class="footer__additional-menu">
-                            <li class="footer__additional-menu-item"><a class="footer__additional-menu-link" href="#">Условия использования</a></li>
-                            <li class="footer__additional-menu-item"><a class="footer__additional-menu-link" href="#">Политика конфиденциальности</a></li>
-                            <li class="footer__additional-menu-item"><a class="footer__additional-menu-link" href="#">Карта сайта</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 order-lg-1 order-sm-2 order-3">
-                        <p class="footer__copyright">TravelClass© 2018. Все права защищены</p>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 order-lg-3 order-sm-3 order-1">
-                        <div class="footer__callback"><a class="footer__phone" href="tel:+78001111111">8-800-770-78-37</a><a class="footer__free-call" href="#">Бесплатный звонок</a></div>
-                    </div>
-                </div>
-            </div>
+            <!--+e('div').info-blocks-->
+            <!--    .row-->
+            <!--        .col-lg-5.order-lg-2.order-sm-1.order-2-->
+            <!--            +e('ul').additional-menu-->
+            <!--                +e('li').additional-menu-item-->
+            <!--                    +e('a').additional-menu-link(href='#') Условия использования-->
+            <!--                +e('li').additional-menu-item-->
+            <!--                    +e('a').additional-menu-link(href='#') Политика конфиденциальности-->
+            <!--                +e('li').additional-menu-item-->
+            <!--                    +e('a').additional-menu-link(href='#') Карта сайта-->
+            <!--        .col-lg-4.col-sm-6.order-lg-1.order-sm-2.order-3-->
+            <!--            +e('p').copyright TravelClass© 2018. Все права защищены-->
+            <!--        .col-lg-3.col-sm-6.order-lg-3.order-sm-3.order-1-->
+            <!--            +e('div').callback-->
+            <!--                +e('a').phone(href='tel:' + tel)= phone-->
+            <!--                +e('a').free-call(href='#') Бесплатный звонок-->
         </div>
     </div>
-    <form class="popup white-popup-block mfp-hide" id="add-video-modal" autocomplete="off">
-        <p class="popup__title">Добавить ссылку на видеоролик</p>
-        <p class="popup__desc">Добавьте ссылку на видео о школе, источники: youtube, vimeo</p><input class="input-default input-default_video" type="text" name="video" placeholder="Например: https://www.youtube.com/watch?v=SkgTxQm9DWM" required="required" /><input class="popup__submit button button_default"
-            type="submit" value="Добавить видео" /></form>
+    <!--+b('form')#add-video-modal.popup.white-popup-block.mfp-hide(autocomplete='off')-->
+    <!--    +e('p').title Добавить ссылку на видеоролик-->
+    <!--    +e('p').desc Добавьте ссылку на видео о школе, источники: youtube, vimeo-->
+    <!--    +b('input').input-default_video(type='text', name='video', placeholder='Например: https://www.youtube.com/watch?v=SkgTxQm9DWM', required='required')-->
+    <!--    +e('input').submit.button_default(type='submit', value='Добавить видео')-->
 </body>
 
 </html>

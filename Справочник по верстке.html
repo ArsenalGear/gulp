@@ -1,28 +1,151 @@
-Закрыть вопросы
+-Наработки верстки
+
+    //шрифт
+        font: 400 1.5rem/1.7rem $font-main;
+
+    //пример mobile first
+        .header {//здесь стили для мобилы
+          min-height: 5rem;
+          position: fixed;
+          background-size: 100%;
+          background: #f1f1f1 url('../img/house.jpg') no-repeat top right;
+
+          @include mq($from: xsmin) {//здесь для десктопа
+            background: red;
+            //background: #f1f1f1 url('../img/house.jpg') no-repeat center top;
+          }
+        }
+
+    //паддинг в нопках
+        .button {
+          padding: 2rem;
+          border-right: 1px solid rgba(#555555, 0.1);
+        }
+
+    //модалка
+       .mfp-close {
+         top: 1.375rem;
+         right: 2rem;
+         display: block;
+         width: 1.125rem;
+         height: 1.125rem;
+         background: url(../img/theme/icons/close_default.svg) no-repeat center;
+         background-size: .875rem;
+         font-size: 0;
+         opacity: 1;
+       }
+
+    //курсив шрифт
+        @font-face {
+          font-family: 'Montserrat';
+          src: local('Montserrat'), url('../fonts/Montserrat/montserrat.woff2') format('woff2'), url('../fonts/Montserrat/montserrat.woff') format('woff'), url('../fonts/Montserrat/montserrat.ttf') format('truetype');
+          font-weight: 400;
+          font-style: italic;
+        }
+
+-Ошибки допущенные при верстке проекта
+	1) не был до конца донастроен галп - донастроил
+	2) Забыл систематизацию подготовки макета
+		а)Подключаем шрифты
+		б)Скачиваем картинки
+		в)Смотрим размер контейнера
+	3)Решил подключать шрифт не из макета и долго его искал
+	4)Неправильные свойства выбивают галп
+	5)Не понятно как истинно брать размеры с блоков которые содержат текст
+
+-верскта без gulp на vc code
+	-https://www.youtube.com/watch?v=mC8JW_aG2EM
+
+	-создаем на гитхабе репозиторий через сайт гитхаба и создаем там ридми
+
+	-клонируем через ssh купируем с сайта адрес ssh
+
+	-создаем проект в vc папаку проекта и в ней пишем git clone адрес ssh
+
+	-создем index.html страницу и подключаем стили
+
+	-создаем папку sass и js (4.40 установить плагин live sass compiler sass в css там зайти в setting json)
+
+	-нажимаем внизу кнопку watch sass в vc code
+
+	-подготовка к комиту git add . (как сейв в игре)
+		потом пишем git comit -m "сздана базовая разметка"    - это коммент в кавычках нажимаем enter
+		потом отправляем на репозиторий git push
+
+	-устанавливае плагин live server (релодит страницу) - открыть html страницу в vc code и ПКМ контекстном меню выбрать open with live server
+
+	-header.header>.navbar+.hero|c - преобразуется в разметку с комментами закрывающегося div-a
+	в sass файлах не забыть про подчеркивания и импорты
+
+	-autoprefixer поставить для префиксов
+
+	-подключаем normilize css
+
+	-кликнуть на пустое место в avacode чтобы увидеть какие шрифты подключены к сайту (webfonts.pro)
+
+	-шапка header min-height и возможно pos fixed left 0 top 0 width 100% bacground #fff
+
+	-border-right: 1px solid rgba(#555555, 0.1) -opacity
+
+	-span делать блочным для отступов
+
+	-гамбургер рисовать спанами для того чтобы можно было применять анимацию
+
+	-разницу между отступами вниз от текста используем lh а остальное на глаз доганяем mb
+
+	-отступы внутри кнопки используем padding: 22px 22px;
+
+	-фоновый цвет и картинка блока : background: #f1f1f1 url('../img/house.jpg') no-repeat center top (по грризонтали) 80px; но лучше сделать mt80px самому блоку с картинкой
+
+	-фоновый размер background-size: contain
+		а в media 575px
+			background-size: 100%
+			background-position: top right
+			//background-position: top 80px right
+
+
+	-padding блока с тектом в блоке с картинкой брать так: сверху отступ брать от верхнего элемента вверх (блок с тектом) и от самого нижнего элемента - вниз (кнопка)
+
+	-nav.menu__nav>a.menu__link*7[href=#]
+
+	-BEM .b1>.b2_m1>.-e1+.--e2_m2 эквивалентно
+		<div class="b1">
+		    <div class="b2 b2_m1">
+		        <div class="b2__e1"></div>
+		        <div class="b1__e2 b1__e2_m2"></div>
+		    </div>
+		</div>
+
+	-меню в строку сайта 1.05.15
+		.menu {
+			posf
+			zi0
+			top80px (прямо под шапкой получается)
+			w100%
+			l0
+			o0 (для макбуков, так у них можно оттягивать экран)
+			transform: translateY(-100%); (заезжает под шапку)
+			transform: translateY(-100%); (выезжает из под шапки)
+		}
+
+-Закрыть вопросы
+
+	-как кастомизировать селекты в 2018 году
+
+	-Полифилы
+
+	-GITflow фронт
+
+	-сверстать что то
 
 -Гриды
 
--как кастомизировать селекты в 2018 году
+-микроразметка html
+	Проверка разметки гугл
+		https://search.google.com/structured-data/testing-tool/u/0/
 
--Полифилы
-
--микроразметка css
-
--GITflow фронт
-
-
-
-
--проверить взятие с макетов размеров
-
--сверстать что то
-
--Настроить Галп на гите
-
-
-
-
-
+	Онлайн уставновка разметки гугл
+		https://www.google.com/webmasters/markup-helper/u/0/
 
 -sass миксины (куски повторяющегося кода)
 	bottom: $one * $two; //арифметические операции
@@ -57,6 +180,16 @@
 	Mockupplus прототипы -> HTML, exe, PNG
 
 -Медиа стараться писать в своих стилях без отдельного include media
+	.footer {
+	  display: block;
+	  width: 100%;
+	  padding: 1rem 15px;
+	  background: $bg-dark-color;//здесь идут стили для мобилы
+	  @media screen and (min-width: 534px) {//здесь идут стили для десктопа
+	    display: flex;
+	    justify-content: space-between;
+	  }
+  }
 
 -coverage для проверки используемого и неиспользуемого CSS В ХРОМЕ
 
@@ -103,8 +236,6 @@
 
 	https://html5book.ru/examples/html-tags.html
 
--https://html5book.ru/osnovy-html/#part2
-
 -заглушка под ie меньше 10
 
 	https://github.com/burocratik/outdated-browser
@@ -143,6 +274,10 @@
  В IE есть возможность эмуляции старых браузеров
 
 -https://ru.bem.info БЭМ
+
+	+emmet
+		https://webcache.googleusercontent.com/search?q=cache:52WeDZKVNaAJ:https://docs.emmet.io/filters/bem/+&cd=1&hl=ru&ct=clnk&gl=ru
+
 	имена блоков и элементов - кэмелкейсом
 	блок всегда может существовать отдельно друг от друга в любом другом месте
 
@@ -383,7 +518,7 @@
 		<div class="file-default__display">Загрузить фотографии с&nbsp;компьютера</div>
 	</label>
 	.main-form__uploaded-file-name_photo {
-	    background: url(../img/theme/icons/photo-camera_default.svg) no-repeat center left;  //без повтора по центру по вертикали слева по горизонтали
+	    background: url(../img/theme/icons/photo-camera_default.svg) no-repeat center left;  //без повтора по центру по вертикали  слева по горизонтали
 	    background-size: 1rem; //размер svg
 	    //  div {background-size: 300px 150px;}
 			div {background-size: 50% 30%;}
@@ -408,6 +543,22 @@
 	<mark> - выделение
 
 -Теги + Стили
+
+	-css правила
+		Каждый селектор – на отдельной строке
+			#snapshot-box h2,
+			#profile-box h2,
+			#order-box h2 {
+			  padding: 0 0 6px 0;
+			  font-weight: bold;
+			}
+
+		Свойства, сильнее влияющие на документ, идут первыми
+			-Сначала положение элемента относительно других: position, left/right/top/bottom, float, clear, z-index.
+			-Затем размеры и отступы: width, height, margin, padding…
+			-Рамка border, она частично относится к размерам.
+			-Общее оформление содержимого: list-style-type, overflow…
+			-Цветовое и стилевое оформление: background, color, font…
 
 	-outline не убирать для взаимодействия с элементом в фокусе (передвигаемся табом) с клавиатуры (кнопки, инпуты). Это все равно что писать в редакторе кода отвлечься, а потом ты не видишь где остановился и курсора тоже нет.
 
@@ -642,6 +793,9 @@
 
 	-bootstrap
 
+		Контейнер открывать внутри section или header footer
+		row использовать только когда нужно что то перераскидать на медиа, или карточек товаров
+
 		bs3 x<767 - xs; 768<x<991 sm; 991<x<1199 - md; x>1200 - lg;
 		bs4 x<576 - col; 576<=x<=767 sm; 768<=x<=991 - md; 992<=x<=1199 - lg; x>=1200 -xl;
 
@@ -693,6 +847,8 @@
 			}
 
 		Жадность
+			Жадность начинает работать если не равна 0 и если оставшееся место в строке позволяет растнуться жадному элементу, то он растягиватся. Жадность работает когда она физически выше чем значение flex basis в конкретном случае
+
 			flex-grow: 2; //будет больше чем остальные блоки а остальным прописать 1
 			по умолчанию все карточки товара имеют flex-grow: 0 и если одной из карточек дать flex-grow: 1 то она займет все пространство свободное и оттеснит к правому краю остальные карточки
 			пространство делится на 6 и 1 1 3 1 = 1\6 1\6 3\6 1\6 обязательно указать flex basis в пикселях или процентах и тогда норм будет ) https://youtu.be/hrFPD0nkRVA?t=3900
