@@ -6,40 +6,13 @@
 @import "mixins";
 
 .footer {
-  //display: none;
-}
-
-section  {
-  padding-bottom: 5rem;
-
+  display: none;
 }
 
 .header {
-  //margin-bottom: 50px;
 
   &__calc {
     margin-bottom: 2rem;
-  }
-}
-
-.main {
-
-}
-
-.questions {
-  display: none;
-
-
-}
-
-.second-slide, .third-slide, .forth-slide {
-
-  &__questions {
-    background-color: #f7f5f6;
-  }
-  
-  & .question:not(:first-child) {
-    display: none;
   }
 }
 
@@ -60,9 +33,27 @@ section  {
   }
 }
 
+.questions {
+  display: none;
+}
+
+section  {
+  padding-bottom: 5rem;
+}
+
+.test-desc {
+
+  &.total-screen {
+    margin-top: 4rem;
+  }
+}
+
+.yellow {
+  background-color: #ffffe0;
+}
+
+//
 .calc, .max-weight, .total-summ {
-  //position: fixed;
-  //left: 10px;
   margin-top: 2rem;
   padding: 5px;
   background-color: #bbbbbb;
@@ -74,18 +65,15 @@ section  {
   }
 }
 
-.yellow {
-  background-color: #ffffe0;
-}
-
-.next {
+.second-slide, .third-slide, .forth-slide, .fifth-slide {
   display: none;
-}
 
-.test-desc {
+  &__questions {
+    background-color: #f7f5f6;
+  }
 
-  &.total-screen {
-    margin-top: 4rem;
+  & .question:not(:first-child) {
+    display: none;
   }
 }
 

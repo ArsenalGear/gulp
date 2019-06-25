@@ -35,11 +35,7 @@ $(function () {
 
         var closestQuest = $(this).closest('.question'); //ближайший блок вопросов
         var thisScoreAttr = parseInt($(this).attr('data-score')); //очки этого инпута
-        var thisScoreSave = parseInt(closestQuest.attr('data-total')); //очки этого инпута уже отвеченного ранее
-        var totalScore = parseInt($('.calc').text()); //подсчет суммы всех отвеченных баллов
-        var totalScoreMax = parseInt($('.max-calc').text()); //подсчет суммы всех максимальных баллов в тесте
         var dataMassive = []; //массив для сбора дата атрибутов
-        var scoreToCalc = totalScore + thisScoreAttr;
 
         closestQuest.find('[data-score]').each(function(e) { //ф-я сбора в массив дата атрибутов
 
@@ -48,37 +44,15 @@ $(function () {
         } );
 
         var maxInMassive = Math.max(...dataMassive);// максимальный атрибут в вопросе
-        // var scoreToMaxCalc = totalScoreMax + maxInMassive; ///////
-
-
 
         if ( closestQuest.hasClass('yellow') ) {
-            closestQuest.attr('data-total', thisScoreAttr); //добавление ответа в блоке во временное хранилище в этот же блок
 
-            var scoreToMaxCalc =  maxInMassive; ///////
-
-
-            var tempCalc = parseInt($('.calc').text());
-
-            var newYellowScore = tempCalc - thisScoreSave + thisScoreAttr;
-            $('.calc').text(newYellowScore);
-            console.log(newYellowScore);
-            console.log(scoreToMaxCalc);
-            console.log(newYellowScore/scoreToMaxCalc*100);
-
-            $('.total-percent, .total').text('').text(Math.round((newYellowScore/scoreToMaxCalc*100)));
-
+            closestQuest.attr('data-choose', '').attr('data-choose', thisScoreAttr);
         }
         else {
-            closestQuest.attr('data-total', thisScoreAttr); //добавление ответа в блоке во временное хранилище в этот же блок
-            var scoreToMaxCalc = totalScoreMax + maxInMassive; ///////
 
-
-            $('.calc').text(scoreToCalc);
-            $('.max-calc').text(scoreToMaxCalc);
-            console.log(scoreToCalc);
-            console.log(scoreToMaxCalc);
-            $('.total-percent, .total').text('').text(Math.round((scoreToCalc/scoreToMaxCalc*100)));
+            closestQuest.attr('data-max', maxInMassive);
+            closestQuest.attr('data-choose', thisScoreAttr);
 
             if ( closestQuest.next('button').hasClass('back') ) {
 
@@ -89,8 +63,36 @@ $(function () {
 
         closestQuest.next('.question').fadeIn(); //появление блока с вопросами следущего
         closestQuest.addClass('yellow'); //добавленин класса yellow к отвеченному блоку
-
         closestQuest.attr('data-max', maxInMassive); //добавление макс возможного ответа в блок с вопросом
     });
 
+    $('#total').on('click', function() {
+
+        var totalMassiveChoose = [];
+        var totalMassiveMax = [];
+
+        $('main').find('[data-choose]').each(function(e) {
+
+            var $el = parseInt($(this).attr('data-choose'));
+            totalMassiveChoose.push(parseInt($el));
+        } );
+
+        var totalMassiveChooseResult = totalMassiveChoose.reduce(function(sum, current) {
+            return sum + current;
+        }, 0);
+
+        $('main').find('[data-max]').each(function(e) {
+
+            var $el = parseInt($(this).attr('data-max'));
+            totalMassiveMax.push(parseInt($el));
+        } );
+
+        var totalMassiveMaxResult = totalMassiveMax.reduce(function(sum, current) {
+            return sum + current;
+        }, 0);
+
+        $('.calc').text('').text(totalMassiveChooseResult);
+        $('.max-calc').text('').text(totalMassiveMaxResult);
+        $('.total-percent, .total').text('').text(Math.round(totalMassiveChooseResult/totalMassiveMaxResult*100));
+    });
 });
