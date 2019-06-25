@@ -33,9 +33,940 @@
     <main>
         <header class="main-page">
             <div class="container">
-                <div class="row"></div>
+                <div class="row">
+                    <div class="col-12"></div>
+                </div>
             </div>
         </header>
+        <section class="first-slide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="first-slide__title">Протестируй потенциального заказчика</h1>
+                        <div class="test-desc">
+                            <p>Ниже перечислены ситуации, в которых подрядчик может себя повести так или иначе <b>до, во время</b> и <b>после</b> встречи на вашем объекте. Тест позволяет предположить, насколько перед вами:</p>
+                            <ul>
+                                <li><b>опытный переговорщик</b> (прислушивается к вашим ожиданиям, уважает ваше время, деньги и эмоции, говорит с вами на одном языке)</li>
+                                <li><b>опытный управленец</b> (организован, внимателен, системен, управляет своим временем, фиксирует и соблюдает договорённости, умеет ставить и контролировать задачи)</li>
+                                <li><b>опытный строитель</b> (вникает в неочевидные для вас детали, знает что приводит к сбоям в процессе ремонта и умеет их предупреждать, знает широкий спект решений для вашей задачи, может сбалансировать бюджет и качество)</li>
+                            </ul>
+                            <p>Утверждать, что работы будут производиться качественно, можно только в процессе работ. Однако тест по «сигнальным» признакам позволяет с холодной головой подойти к подбору строителя, тем самым повысить вероятность, что ваше
+                                взаимодействие будет эффективным и ремонт удастся.</p>
+                            <p>Укажите, как повёл себя строитель в перечисленных ситуациях. И посмотрите результат.</p>
+                            <p>Готовы? Поехали.</p>
+                        </div>
+                        <button class="first-slide__button button button-green" id="go" type="button" value="вперед">вперед</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="second-slide questions">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="second-slide__title">До встречи на объекте</h1>
+                        <div class="second-slide__questions" id="secondPage">
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Насколько подрядчик продвинут в средствах связи?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="1" name="question" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">связаться с подрядчиком можно только голосом по одному телефону (1)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="question" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">связаться с подрядчиком можно по двум каналам коммуникации (например, телефон и e-mail) (2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">с подрядчиком можно связаться более чем по двум каналам коммуникации (например, телефон, почта, мессенджер) (3)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Вы попросили, чтобы подрядчик приехал на объект, посмотрел все на месте и составил предварительную смету. Подрядчик</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="questions" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">предупредил, что это платная услуга, сразу сказал цену и что оплата будет учтена в стоимости работ (2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="1" name="questions" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">предупредил, что это платная услуга, но добавил, что он рядом/по дороге, поэтому оплату за выезд не возьмёт (1)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="0" name="questions" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">подрядчик не берёт оплату за выезд (0)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Перед тем, как приехать, подрядчик</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="questionss" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">подтвердил время и место встречи (2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="0" name="questionss" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">не подтвердил место и время встречи (0)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="0" name="questionss" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">вы сами подтвердили время и место (0)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="questionss" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">вы согласовали встречу на тот же или следующий день (2)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="second-slide__button button back" type="button" value="назад">назад</button>
+                            <button class="second-slide__button button button-green next" type="button" value="вперед">вперед</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="third-slide questions">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="third-slide__title">Встреча на объекте</h1>
+                        <div class="third-slide__questions" id="thirdPage">
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Как вы сообщили подрядчику место встречи и нашёл ли он его с первого раза?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="question21" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">вы сообщили подробно. С навигатором, картой и вашими комментариями любой может найти. Подрядчик нашёл место (2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-1" name="question21" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">вы сообщили подробно. Подрядчик не нашёл, поэтому звонил и уточнял (-1)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Вы согласовали время и место встречи. Подрядчик</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question22" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">приехал вовремя, как и договаривались (3)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="question22" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">опоздал, но предупредил, что опаздывает (2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="0" name="question22" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">опоздал и не предупредил, что опаздывает (0)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-4" name="question22" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">не приехал и не предупредил, потом предложил ещё одну встречу (-4)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>На чём приехал подрядчик?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="question23" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">на машине. Запарковал аккуратно. Машина никому не мешала (2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-2" name="question23" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">на машине. Встал, как было удобно ему, и загородил машиной проезд или тропинку (-2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="question23" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">вы не знаете, как он добрался, или не видели, как запарковался (2)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Заранее или в начале встречи Подрядчик просил, сколько у вас есть времени и сказал, сколько времени у него?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="0" name="question24" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">про вас не спросил, про себя не сказал (0)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="question24" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">про вас спросил, про себя не сказал (2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question24" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">спросил вас и сказал про себя (3)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Как строилось общение в первую треть встречи?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="question25" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">в основном говорили вы, заказчик задавал вопросы и слушал (2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="0" name="question25" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">в основном говорил подрядчик, вы слушали (0)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="1" name="question25" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">говорили примерно поровну (1)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-1" name="question25" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">говорили только вы (-1)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-1" name="question25" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">говорил только подрядчик (-1)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Как подрядчик отзывался о предыдущих исполнителях на вашем объекте?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-2" name="question26" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">ругал людей («Где вы таких находите?», «Ну и криворукие же вам тут делали»), не объяснял причин (-2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="1" name="question26" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">ругал людей, но объяснял, почему и как нужно было сделать иначе (1)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question26" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">не ругал людей, говорил только о технологических нарушениях и предлагал решение (3)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="0" name="question26" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">не обсуждал предыдущих подрядчиков вообще (0)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Что подрядчик спрашивал о том, какой вы видите результат ремонта?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question27" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">интересовался, есть ли проект, дизайн, картинки, схемы, рисунки или другая визуализация ожиданий от ремонта (3)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-1" name="question27" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">не спрашивал ничего о моих ожиданиях, сразу предлагал решения (-1)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Подрядчик спросил, кто будет принимать участие в проекте с вашей стороны?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="question41" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">Да, поинтересовался (2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="0" name="question41" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">Нет, не поинтересовался (0)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Насколько подрядчик был внимателен?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question28" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">Задавал вопросы. Не перебивал (3)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="1" name="question28" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">Задал вопросы., но ответы недослушивал. Пришлось несколько раз ему повторить одну мысль (1)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-1" name="question28" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">Вообще не задавал вопросы, а только говорил (-1)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Как подрядчик во время встречи фиксировал договоренности или важные моменты в ремонте?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question29" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">записывал в блокноте/планшете, фотографировал (3)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="1" name="question29" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">ничего не записывал, хотя блокнот/планшет с собой был (1)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="0" name="question29" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">ничего не записывал, тетради с собой не было (0)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Насколько детально подрядчик подходил к задаче?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question30" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">пытался посмотреть больше, чем видно снаружи: отогнул доску, чтобы увидеть, что за ней; открыл люк; посветил фонарём в щель; порылся в строительном мусоре; простучал стены и послушал звук (3)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="0" name="question30" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">осмотрелся, но никуда не залезал (0)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Была ли необходимость производить какие-то замеры во время встречи?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="question31" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">не было необходимости (2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="question31" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">да, нужно было что-то замерить. У подрядчика был собой измерительный прибор (2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="0" name="question31" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">да, нужно было что-то замерить. У подрядчика измерительного прибора с собой не было (0)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Как подрядчик предлагал решения?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question32" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">предлагал несколько вариантов. Аргументировал, чем хорош каждый (3)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="1" name="question32" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">предлагал только один вариант решения (1)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-1" name="question32" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">своих вариантов не предлагал, а только спрашивал, что хотите вы (-1)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Насколько подрядчик заботится о ваших средствах?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question33" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">указал, где можно сэкономить, а где лучше не стоит (3)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="0" name="question33" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">не говорил, где можно сэкономить, а где — нет (0)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-3" name="question33" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">просто спросил, сколько вы готовы отдать за ремонт (-3)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Как подрядчик разговаривал с вами?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-2" name="question34" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">использовал фразы «Даже не переживайте», «Не обидим», «Малой кровью», «Даже не обсуждается», «Для своих», «Мы же не чужие люди», «Все сделаем как надо», «У меня еще ни один клиент не жаловался», «Да вы вообще
+                                                можете нам ключи оставить, а сами занимайтесь своими делами» (-2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="1" name="question34" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">не использовал в разговоре эти фразы (1)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Как подрядчик описывал процесс совместной работы?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question35" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">подробно рассказывал, как устроен процесс, что за чем следует, какие правила и процедуры (3)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-1" name="question35" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">не рассказывает, как устроен процесс совместной работы (-1)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Как подрядчик описал свою роль в проекте?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question36" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">сказал кто он, за что отвечает, какую роль будет играть в проекте? (3)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-1" name="question36" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">кто он, за что отвечает, какую роль будет играть в проекте вы не знаете (-1)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Как подрядчик сообщил о других членах своей команды, которые будут участвовать в проекте?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question37" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">сообщил, на каком этапе и сколько людей будет делать ремонт. Сказал, кто ещё будет принимать участие с его стороны (3)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-1" name="question37" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">вы не знаете, сколько людей будет делать ремонт и кто ещё будет принимать участие в проекте со стороны подрядчика (-1)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Вы всё обговорили и попросили прислать расчёты. Подрядчик</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="question38" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">сказал, когда он пришлёт расчёты (2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-1" name="question38" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">сказал неопределенно или вообще не сказал (-1)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Какое ощущение у вас осталось от общения с подрядчиком?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-2" name="question39" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">торопился, суетился, невнимательный (-2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="question39" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">вдумчивый, неторопливый и дотошный (2)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>После встречи с подрядчиком</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question40" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">вы ощутили, что стали лучше разбираться в теме (3)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="0" name="question40" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">вы не узнали ничего нового для себя о ремонте (0)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="third-slide__button button back" type="button" value="назад">назад</button>
+                            <button class="third-slide__button button button-green next" type="button" value="вперед">вперед</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="forth-slide questions">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="forth-slide__title">После встречи</h1>
+                        <div class="forth-slide__questions">
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Подрядчик прислал расчёты. Он</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="question42" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">сдержал слово и прислал вовремя или раньше (2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="1" name="question42" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">прислал с опозданием, но предупредил (1)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-1" name="question42" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">прислал с опозданием и не предупредил (-1)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-3" name="question42" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">не прислал, пришлось напоминать (-3)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Количество предложений, которые прислал подрядчик</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="1" name="question43" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">Предложил один вариант (1)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question43" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">Предложил 2-3 варианта или уточнил, в чём можно корректировать (3)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Как подрядчик составил предложение?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-4" name="question44" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">указал только общую стоимость всех работ. Например, ремонт кухни — 200 тысяч под ключ (-4)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="0" name="question44" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">сделал список работ, последовательность работ стоит нелогично или объединил несколько работ в одну строку. Например, поставил монтаж новой ванны перед демонтажом старой, или демонтаж старого потолка и монтаж
+                                                нового указал в одной строке (0)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="1" name="question44" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">сделал список работ, работы сгруппировал по типу, например, «работы по полу» или «работы по стенам» (1)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question44" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">сделал список работ, причем работы указал в той последовательности, как они будут выполняться (3)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Как подрядчик сформулировал названия работ в расчётах?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="1" name="question45" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">понятно для вас. Можно понять, в чём суть работы (1)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="0" name="question45" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">не очень понятно — написано на профессиональном языке и без пояснений (0)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-1" name="question45" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">ничего не понятно, поскольку написано слишком запутанно и сложно (-1)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Какая длительность этапов?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question46" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">Этапы длятся не больше полутора-двух недель (3)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="1" name="question46" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">Этапы длятся месяц (1)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="0" name="question46" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">Этапы длятся больше месяца (0)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-2" name="question46" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">Длительность этапов неизвестна (-2)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>На каких условиях по оплате подрядчик предлагает работать?</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-4" name="question47" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">100% предоплата (-4)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-3" name="question47" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">50% предоплата в начале, 50% в конце ремонта (-3)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-3" name="question47" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">50% предоплата до начала работ, 30% в середине, 20% по завершению (-3)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="question47" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">30% предоплата за работы по ближайшему этапу, далее оплачивать каждый этап после завершения (2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="3" name="question47" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">без предоплаты за работы. Оплата после завершения этапа (3)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-2" name="question47" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">без предоплаты за работы. Оплата после завершения всех работ (-2)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="question">
+                                <p class="ww"></p>
+                                <h3>Вы обговорили работы и посмотрели расчёты. Теперь нужно решить, будете ли работать. Подрядчик</h3>
+                                <ul class="question__label-block">
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="2" name="question48" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">не торопит с принятием решения (2)</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="question__label">
+                                            <input type="radio" data-score="-2" name="question48" />
+                                            <span class="question__span"></span>
+                                            <span class="question__text">торопит с решением, намекает на свою занятость. Говорит, что у него очередь клиентов и если вы сейчас не скажете, то он возьмет другой проект (-2)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="forth-slide__button button back" type="button" value="назад">назад</button>
+                            <button class="forth-slide__button button button-green next" type="button" value="вперед">К результатам</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="fifth-slide questions">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>вы набрали
+                            <span class="total"></span> %</h1>
+                        <div class="test-desc total-screen">
+                            <ul>
+                                <li><b>90-100%</b> Легендарный уровень</li>
+                                <li><b>80-90%</b> Отличный уровень</li>
+                                <li><b>60-80%</b> Хороший уровень</li>
+                                <li><b>30-50%</b> Средний уровень</li>
+                                <li><b>20-30%</b> Не фонтан</li>
+                                <li><b>менее 20%</b> Бегите</li>
+                            </ul>
+                            <p>— Высокая оценка не гарантирует результат с адекватным запросу срокам, бюджету, качеству и комфорту воплощения. Потому что от подрядчика зависит не более 50% результата. Но высокая оценка значительно повышает вероятность успеха.</p>
+                            <p>— Низкая оценка не гарантирует низкое качество работы подрядчика. Возможно, если нет никаких сбоев, он работает очень хорошо. Но вероятность, что всё сорвётся в случае непредвиденных обстоятельств, очень высокая.</p>
+                            <p>— Тест не может учесть всех условий вашей встречи. Также возможности соблюсти все «правильные» условия в одну встречу может не представиться. Делайте на это поправку и не будьте чрезмерно требовательны.</p>
+                            <p>— Учтите, что подрядчики с высоким уровнем оценки, вероятнее всего, будут иметь соответствующий уровень цен. Что будет обосновано. Подрядчики с низким уровнем оценки тоже могут иметь высокий уровень, но обоснованно это уже
+                                не будет.</p>
+                        </div>
+                        <button class="fifth-slide__button button back" type="button" value="назад">назад</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="footer__calc">подсчет суммы всех отвеченных баллов
+                            <span class="calc">0</span>
+                        </h2>
+                        <h2 class="footer__calc">подсчет суммы всех максимальных баллов в тесте
+                            <span class="max-calc">0</span>
+                        </h2>
+                        <h2 class="footer__calc">сумма всех отвеченных баллов разделить на сумму всех баллов максимальных ответов умножить на 100
+                            <span class="total-percent">0</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
     <div class="footer">
         <div class="container">
@@ -57,11 +988,6 @@
             <!--                +e('a').free-call(href='#') Бесплатный звонок-->
         </div>
     </div>
-    <!--+b('form')#add-video-modal.popup.white-popup-block.mfp-hide(autocomplete='off')-->
-    <!--    +e('p').title Добавить ссылку на видеоролик-->
-    <!--    +e('p').desc Добавьте ссылку на видео о школе, источники: youtube, vimeo-->
-    <!--    +b('input').input-default_video(type='text', name='video', placeholder='Например: https://www.youtube.com/watch?v=SkgTxQm9DWM', required='required')-->
-    <!--    +e('input').submit.button_default(type='submit', value='Добавить видео')-->
 </body>
 
 </html>

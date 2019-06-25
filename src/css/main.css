@@ -1,0 +1,287 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/roboto/Roboto.ttf");
+  src: url("../fonts/roboto/Roboto.woff2") format("woff2"), url("../fonts/roboto/Roboto.woff") format("woff"), url("../fonts/roboto/Roboto.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/roboto/Robotolight.ttf");
+  src: url("../fonts/roboto/Robotolight.woff2") format("woff2"), url("../fonts/roboto/Robotolight.woff") format("woff"), url("../fonts/roboto/Robotolight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/roboto/Robotothin.ttf");
+  src: url("../fonts/roboto/Robotothin.woff2") format("woff2"), url("../fonts/roboto/Robotothin.woff") format("woff"), url("../fonts/roboto/Robotothin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/roboto/Robotomedium.ttf");
+  src: url("../fonts/roboto/Robotomedium.woff2") format("woff2"), url("../fonts/roboto/Robotomedium.woff") format("woff"), url("../fonts/roboto/Robotomedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/roboto/Robotobold.ttf");
+  src: url("../fonts/roboto/Robotobold.woff2") format("woff2"), url("../fonts/roboto/Robotobold.woff") format("woff"), url("../fonts/roboto/Robotobold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'FontAwesome Regular';
+  src: url("../fonts/fontawesome/fa-regular-400.eot");
+  src: url("../fonts/fontawesome/fa-regular-400.eot") format("embedded-opentype"), url("../fonts/fontawesome/fa-regular-400.woff2") format("woff2"), url("../fonts/fontawesome/fa-regular-400.woff") format("woff"), url("../fonts/fontawesome/fa-regular-400.ttf") format("truetype"), url("../fonts/fontawesome/fa-regular-400.svg#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'FontAwesome Solid';
+  src: url("../fonts/fontawesome/fa-solid-900.eot");
+  src: url("../fonts/fontawesome/fa-solid-900.eot") format("embedded-opentype"), url("../fonts/fontawesome/fa-solid-900.woff2") format("woff2"), url("../fonts/fontawesome/fa-solid-900.woff") format("woff"), url("../fonts/fontawesome/fa-solid-900.ttf") format("truetype"), url("../fonts/fontawesome/fa-solid-900.svg#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'FontAwesome Brands';
+  src: url("../fonts/fontawesome/fa-brands-400.eot");
+  src: url("../fonts/fontawesome/fa-brands-400.eot") format("embedded-opentype"), url("../fonts/fontawesome/fa-brands-400.woff2") format("woff2"), url("../fonts/fontawesome/fa-brands-400.woff") format("woff"), url("../fonts/fontawesome/fa-brands-400.ttf") format("truetype"), url("../fonts/fontawesome/fa-brands-400.svg#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html {
+  font-size: 16px; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 400 1rem/1.125rem Roboto, sans-serif;
+  color: black;
+  background: white; }
+
+main {
+  min-height: 100vh; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.2;
+  color: black; }
+
+h1 {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #fff;
+  background-color: #cb6316;
+  padding: 1rem; }
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 3.16rem; }
+
+h3 {
+  font-size: 1.17rem;
+  line-height: 1.3rem;
+  margin-bottom: 0.8rem; }
+
+h4 {
+  font-size: 1rem;
+  line-height: 1.33rem; }
+
+h5 {
+  font-size: 0.83rem;
+  line-height: 1.67rem; }
+
+h6 {
+  font-size: 0.67rem;
+  line-height: 2.33rem; }
+
+p {
+  font: inherit;
+  color: black; }
+
+b, strong {
+  color: inherit;
+  font: 700 1rem/1.125rem Roboto, sans-serif; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
+li {
+  list-style: inside none;
+  line-height: 1.4rem; }
+
+fieldset {
+  border: 0; }
+
+label {
+  margin: 0; }
+
+button {
+  margin-top: 1rem; }
+
+textarea {
+  resize: none; }
+
+a {
+  color: #0059e2;
+  text-decoration: underline;
+  cursor: pointer;
+  -webkit-transition: all 0.33s;
+  transition: all 0.33s; }
+  a:hover, a:focus {
+    color: #0059e2;
+    text-decoration: none;
+    -webkit-transition: all 0.33s;
+    transition: all 0.33s; }
+  a:active {
+    opacity: 0.8;
+    color: #0059e2; }
+  a:visited {
+    color: palevioletred; }
+
+img {
+  max-width: 100%; }
+
+blockquote {
+  margin: 0; }
+
+figure {
+  margin: 0; }
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-color: grey; }
+
+body::-webkit-scrollbar {
+  height: 7px;
+  width: 7px; }
+
+.button {
+  position: relative;
+  margin: 0.8rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #cb6316;
+  outline: none;
+  border: 1px solid #cb6316;
+  color: white;
+  font: 500 1rem/1.2rem Roboto, sans-serif; }
+  .button:hover, .button:focus {
+    background-color: white;
+    color: #cb6316;
+    text-decoration: none; }
+  .button-green {
+    background-color: #43a047;
+    border: 1px solid #43a047; }
+    .button-green:hover, .button-green:focus {
+      background-color: white;
+      color: #43a047;
+      text-decoration: none; }
+
+.question__label {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative; }
+  .question__label .question__span {
+    display: block;
+    margin-right: 1rem;
+    min-width: 16px;
+    min-height: 16px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #d97925;
+    border-radius: 50%; }
+  .question__label input {
+    position: absolute;
+    opacity: 0; }
+    .question__label input:checked + span {
+      background-color: #d97925;
+      border: 2px solid #d97925;
+      border-radius: 50%; }
+
+section {
+  padding-bottom: 5rem; }
+
+.header__calc {
+  margin-bottom: 2rem; }
+
+.questions {
+  display: none; }
+
+.second-slide__questions, .third-slide__questions, .forth-slide__questions {
+  background-color: #f7f5f6; }
+
+.second-slide .question:not(:first-child), .third-slide .question:not(:first-child), .forth-slide .question:not(:first-child) {
+  display: none; }
+
+.question {
+  padding: 10px; }
+  .question__label-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .question__label-block label {
+      margin-bottom: 1rem; }
+  .question__text {
+    line-height: 1.3rem; }
+
+.calc, .max-weight, .total-summ {
+  margin-top: 2rem;
+  padding: 5px;
+  background-color: #bbbbbb;
+  font-size: 40px;
+  z-index: 2; }
+  .calc > span, .max-weight > span, .total-summ > span {
+    background-color: yellow; }
+
+.yellow {
+  background-color: #ffffe0; }
+
+.next {
+  display: none; }
+
+.test-desc.total-screen {
+  margin-top: 4rem; }
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+  html {
+    font-size: 12px; } }
+
+@media screen and (max-width: 767px) and (min-width: 576px) {
+  html {
+    font-size: 12px; } }
+
+@media screen and (max-width: 575px) {
+  html {
+    font-size: 14px; } }
+
+@media screen and (max-width: 374px) {
+  html {
+    font-size: 14px; } }

@@ -6,15 +6,87 @@
 @import "mixins";
 
 .footer {
+  //display: none;
+}
+
+section  {
+  padding-bottom: 5rem;
 
 }
 
 .header {
+  //margin-bottom: 50px;
 
+  &__calc {
+    margin-bottom: 2rem;
+  }
 }
 
 .main {
 
+}
+
+.questions {
+  display: none;
+
+
+}
+
+.second-slide, .third-slide, .forth-slide {
+
+  &__questions {
+    background-color: #f7f5f6;
+  }
+  
+  & .question:not(:first-child) {
+    display: none;
+  }
+}
+
+.question {
+  padding: 10px;
+
+  &__label-block {
+    display: flex;
+    flex-direction: column;
+
+    & label {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__text {
+    line-height: 1.3rem;
+  }
+}
+
+.calc, .max-weight, .total-summ {
+  //position: fixed;
+  //left: 10px;
+  margin-top: 2rem;
+  padding: 5px;
+  background-color: #bbbbbb;
+  font-size: 40px;
+  z-index: 2;
+
+  & > span {
+    background-color: yellow;
+  }
+}
+
+.yellow {
+  background-color: #ffffe0;
+}
+
+.next {
+  display: none;
+}
+
+.test-desc {
+
+  &.total-screen {
+    margin-top: 4rem;
+  }
 }
 
 @import "modals";

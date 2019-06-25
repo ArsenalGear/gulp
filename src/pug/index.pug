@@ -4,3 +4,654 @@ block content
     +b('header').main-page
         .container
             .row
+                .col-12
+
+    +b('section').first-slide
+        .container
+            .row
+                .col-12
+                    +e('h1').title Протестируй потенциального заказчика
+
+                    +b('div').test-desc
+                        +e('p') Ниже перечислены ситуации, в которых подрядчик может себя повести так или иначе <b>до, во время</b> и <b>после</b> встречи на вашем объекте. Тест позволяет предположить, насколько перед вами:
+                        +e('ul')
+                            +e('li') <b>опытный переговорщик</b> (прислушивается к вашим ожиданиям, уважает ваше время, деньги и эмоции, говорит с вами на одном языке)
+                            +e('li') <b>опытный управленец</b> (организован, внимателен, системен, управляет своим временем, фиксирует и соблюдает договорённости, умеет ставить и контролировать задачи)
+                            +e('li') <b>опытный строитель</b> (вникает в неочевидные для вас детали, знает что приводит к сбоям в процессе ремонта и умеет их предупреждать, знает широкий спект решений для вашей задачи, может сбалансировать бюджет и качество)
+                        +e('p') Утверждать, что работы будут производиться качественно, можно только в процессе работ. Однако тест по "сигнальным" признакам позволяет с холодной головой подойти к подбору строителя, тем самым повысить вероятность, что ваше взаимодействие будет эффективным и ремонт удастся.
+                        +e('p') Укажите, как повёл себя строитель в перечисленных ситуациях. И посмотрите результат.
+                        +e('p') Готовы? Поехали.
+
+                    +e('button').button.button.button-green#go(type="button" value="вперед") вперед
+    +b('section').second-slide.questions
+        .container
+            .row
+                .col-12
+                    +e('h1').title До встречи на объекте
+
+                    +e('div').questions#secondPage
+                        +b('div').question
+                            p.ww
+                            +e('h3') Насколько подрядчик продвинут в средствах связи?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="1" name="question")
+                                        +e('span').span
+                                        +e('span').text связаться с подрядчиком можно только голосом по одному телефону (1)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="question")
+                                        +e('span').span
+                                        +e('span').text связаться с подрядчиком можно по двум каналам коммуникации (например, телефон и e-mail) (2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question")
+                                        +e('span').span
+                                        +e('span').text с подрядчиком можно связаться более чем по двум каналам коммуникации (например, телефон, почта, мессенджер) (3)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Вы попросили, чтобы подрядчик приехал на объект, посмотрел все на месте и составил предварительную смету. Подрядчик
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="questions")
+                                        +e('span').span
+                                        +e('span').text предупредил, что это платная услуга, сразу сказал цену и что оплата будет учтена в стоимости работ (2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="1" name="questions")
+                                        +e('span').span
+                                        +e('span').text предупредил, что это платная услуга, но добавил, что он рядом/по дороге, поэтому оплату за выезд не возьмёт (1)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="0" name="questions")
+                                        +e('span').span
+                                        +e('span').text подрядчик не берёт оплату за выезд (0)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Перед тем, как приехать, подрядчик
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="questionss")
+                                        +e('span').span
+                                        +e('span').text подтвердил время и место встречи (2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="0" name="questionss")
+                                        +e('span').span
+                                        +e('span').text не подтвердил место и время встречи (0)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="0" name="questionss")
+                                        +e('span').span
+                                        +e('span').text вы сами подтвердили время и место (0)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="questionss")
+                                        +e('span').span
+                                        +e('span').text вы согласовали встречу на тот же или следующий день (2)
+                        +e('button').button.button.back(type="button" value="назад") назад
+                        +e('button').button.button.button-green.next(type="button" value="вперед") вперед
+    +b('section').third-slide.questions
+        .container
+            .row
+                .col-12
+                    +e('h1').title Встреча на объекте
+
+                    +e('div').questions#thirdPage
+                        +b('div').question
+                            p.ww
+                            +e('h3') Как вы сообщили подрядчику место встречи и нашёл ли он его с первого раза?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="question21")
+                                        +e('span').span
+                                        +e('span').text вы сообщили подробно. С навигатором, картой и вашими комментариями любой может найти. Подрядчик нашёл место (2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-1" name="question21")
+                                        +e('span').span
+                                        +e('span').text вы сообщили подробно. Подрядчик не нашёл, поэтому звонил и уточнял (-1)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Вы согласовали время и место встречи. Подрядчик
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question22")
+                                        +e('span').span
+                                        +e('span').text приехал вовремя, как и договаривались (3)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="question22")
+                                        +e('span').span
+                                        +e('span').text опоздал, но предупредил, что опаздывает (2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="0" name="question22")
+                                        +e('span').span
+                                        +e('span').text опоздал и не предупредил, что опаздывает (0)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-4" name="question22")
+                                        +e('span').span
+                                        +e('span').text не приехал и не предупредил, потом предложил ещё одну встречу (-4)
+                        +b('div').question
+                            p.ww
+                            +e('h3') На чём приехал подрядчик?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="question23")
+                                        +e('span').span
+                                        +e('span').text на машине. Запарковал аккуратно. Машина никому не мешала (2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-2" name="question23")
+                                        +e('span').span
+                                        +e('span').text на машине. Встал, как было удобно ему, и загородил машиной проезд или тропинку (-2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="question23")
+                                        +e('span').span
+                                        +e('span').text вы не знаете, как он добрался, или не видели, как запарковался (2)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Заранее или в начале встречи Подрядчик просил, сколько у вас есть времени и сказал, сколько времени у него?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="0" name="question24")
+                                        +e('span').span
+                                        +e('span').text про вас не спросил, про себя не сказал (0)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="question24")
+                                        +e('span').span
+                                        +e('span').text про вас спросил, про себя не сказал (2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question24")
+                                        +e('span').span
+                                        +e('span').text спросил вас и сказал про себя (3)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Как строилось общение в первую треть встречи?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="question25")
+                                        +e('span').span
+                                        +e('span').text в основном говорили вы, заказчик задавал вопросы и слушал (2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="0" name="question25")
+                                        +e('span').span
+                                        +e('span').text в основном говорил подрядчик, вы слушали (0)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="1" name="question25")
+                                        +e('span').span
+                                        +e('span').text говорили примерно поровну (1)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-1" name="question25")
+                                        +e('span').span
+                                        +e('span').text говорили только вы (-1)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-1" name="question25")
+                                        +e('span').span
+                                        +e('span').text говорил только подрядчик (-1)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Как подрядчик отзывался о предыдущих исполнителях на вашем объекте?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-2" name="question26")
+                                        +e('span').span
+                                        +e('span').text ругал людей ("Где вы таких находите?", "Ну и криворукие же вам тут делали"), не объяснял причин (-2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="1" name="question26")
+                                        +e('span').span
+                                        +e('span').text ругал людей, но объяснял, почему и как нужно было сделать иначе (1)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question26")
+                                        +e('span').span
+                                        +e('span').text не ругал людей, говорил только о технологических нарушениях и предлагал решение (3)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="0" name="question26")
+                                        +e('span').span
+                                        +e('span').text не обсуждал предыдущих подрядчиков вообще (0)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Что подрядчик спрашивал о том, какой вы видите результат ремонта?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question27")
+                                        +e('span').span
+                                        +e('span').text интересовался, есть ли проект, дизайн, картинки, схемы, рисунки или другая визуализация ожиданий от ремонта (3)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-1" name="question27")
+                                        +e('span').span
+                                        +e('span').text не спрашивал ничего о моих ожиданиях, сразу предлагал решения (-1)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Подрядчик спросил, кто будет принимать участие в проекте с вашей стороны?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="question41")
+                                        +e('span').span
+                                        +e('span').text Да, поинтересовался (2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="0" name="question41")
+                                        +e('span').span
+                                        +e('span').text Нет, не поинтересовался (0)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Насколько подрядчик был внимателен?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question28")
+                                        +e('span').span
+                                        +e('span').text Задавал вопросы. Не перебивал (3)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="1" name="question28")
+                                        +e('span').span
+                                        +e('span').text Задал вопросы. но ответы недослушивал. Пришлось несколько раз ему повторить одну мысль (1)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-1" name="question28")
+                                        +e('span').span
+                                        +e('span').text Вообще не задавал вопросы, а только говорил (-1)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Как подрядчик во время встречи фиксировал договоренности или важные моменты в ремонте?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question29")
+                                        +e('span').span
+                                        +e('span').text записывал в блокноте/планшете, фотографировал (3)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="1" name="question29")
+                                        +e('span').span
+                                        +e('span').text ничего не записывал, хотя блокнот/планшет с собой был (1)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="0" name="question29")
+                                        +e('span').span
+                                        +e('span').text ничего не записывал, тетради с собой не было (0)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Насколько детально подрядчик подходил к задаче?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question30")
+                                        +e('span').span
+                                        +e('span').text пытался посмотреть больше, чем видно снаружи: отогнул доску, чтобы увидеть, что за ней; открыл люк; посветил фонарём в щель; порылся в строительном мусоре; простучал стены и послушал звук (3)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="0" name="question30")
+                                        +e('span').span
+                                        +e('span').text осмотрелся, но никуда не залезал (0)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Была ли необходимость производить какие-то замеры во время встречи?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="question31")
+                                        +e('span').span
+                                        +e('span').text не было необходимости (2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="question31")
+                                        +e('span').span
+                                        +e('span').text да, нужно было что-то замерить. У подрядчика был собой измерительный прибор (2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="0" name="question31")
+                                        +e('span').span
+                                        +e('span').text да, нужно было что-то замерить. У подрядчика измерительного прибора с собой не было (0)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Как подрядчик предлагал решения?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question32")
+                                        +e('span').span
+                                        +e('span').text предлагал несколько вариантов. Аргументировал, чем хорош каждый (3)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="1" name="question32")
+                                        +e('span').span
+                                        +e('span').text предлагал только один вариант решения (1)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-1" name="question32")
+                                        +e('span').span
+                                        +e('span').text своих вариантов не предлагал, а только спрашивал, что хотите вы (-1)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Насколько подрядчик заботится о ваших средствах?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question33")
+                                        +e('span').span
+                                        +e('span').text указал, где можно сэкономить, а где лучше не стоит (3)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="0" name="question33")
+                                        +e('span').span
+                                        +e('span').text не говорил, где можно сэкономить, а где — нет (0)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-3" name="question33")
+                                        +e('span').span
+                                        +e('span').text просто спросил, сколько вы готовы отдать за ремонт (-3)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Как подрядчик разговаривал с вами?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-2" name="question34")
+                                        +e('span').span
+                                        +e('span').text использовал фразы «Даже не переживайте», «Не обидим», «Малой кровью», «Даже не обсуждается», «Для своих», «Мы же не чужие люди», «Все сделаем как надо», «У меня еще ни один клиент не жаловался», «Да вы вообще можете нам ключи оставить, а сами занимайтесь своими делами» (-2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="1" name="question34")
+                                        +e('span').span
+                                        +e('span').text не использовал в разговоре эти фразы (1)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Как подрядчик описывал процесс совместной работы?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question35")
+                                        +e('span').span
+                                        +e('span').text подробно рассказывал, как устроен процесс, что за чем следует, какие правила и процедуры (3)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-1" name="question35")
+                                        +e('span').span
+                                        +e('span').text не рассказывает, как устроен процесс совместной работы (-1)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Как подрядчик описал свою роль в проекте?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question36")
+                                        +e('span').span
+                                        +e('span').text сказал кто он, за что отвечает, какую роль будет играть в проекте? (3)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-1" name="question36")
+                                        +e('span').span
+                                        +e('span').text кто он, за что отвечает, какую роль будет играть в проекте вы не знаете (-1)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Как подрядчик сообщил о других членах своей команды, которые будут участвовать в проекте?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question37")
+                                        +e('span').span
+                                        +e('span').text сообщил, на каком этапе и сколько людей будет делать ремонт. Сказал, кто ещё будет принимать участие с его стороны (3)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-1" name="question37")
+                                        +e('span').span
+                                        +e('span').text вы не знаете, сколько людей будет делать ремонт и кто ещё будет принимать участие в проекте со стороны подрядчика (-1)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Вы всё обговорили и попросили прислать расчёты. Подрядчик
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="question38")
+                                        +e('span').span
+                                        +e('span').text сказал, когда он пришлёт расчёты (2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-1" name="question38")
+                                        +e('span').span
+                                        +e('span').text сказал неопределенно или вообще не сказал (-1)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Какое ощущение у вас осталось от общения с подрядчиком?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-2" name="question39")
+                                        +e('span').span
+                                        +e('span').text торопился, суетился, невнимательный (-2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="question39")
+                                        +e('span').span
+                                        +e('span').text вдумчивый, неторопливый и дотошный (2)
+                        +b('div').question
+                            p.ww
+                            +e('h3') После встречи с подрядчиком
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question40")
+                                        +e('span').span
+                                        +e('span').text вы ощутили, что стали лучше разбираться в теме (3)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="0" name="question40")
+                                        +e('span').span
+                                        +e('span').text вы не узнали ничего нового для себя о ремонте (0)
+                        +e('button').button.button.back(type="button" value="назад") назад
+                        +e('button').button.button.button-green.next(type="button" value="вперед") вперед
+    +b('section').forth-slide.questions
+        .container
+            .row
+                .col-12
+                    +e('h1').title После встречи
+
+                    +e('div').questions
+                        +b('div').question
+                            p.ww
+                            +e('h3') Подрядчик прислал расчёты. Он
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="question42")
+                                        +e('span').span
+                                        +e('span').text сдержал слово и прислал вовремя или раньше (2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="1" name="question42")
+                                        +e('span').span
+                                        +e('span').text прислал с опозданием, но предупредил (1)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-1" name="question42")
+                                        +e('span').span
+                                        +e('span').text прислал с опозданием и не предупредил (-1)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-3" name="question42")
+                                        +e('span').span
+                                        +e('span').text не прислал, пришлось напоминать (-3)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Количество предложений, которые прислал подрядчик
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="1" name="question43")
+                                        +e('span').span
+                                        +e('span').text Предложил один вариант (1)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question43")
+                                        +e('span').span
+                                        +e('span').text Предложил 2-3 варианта или уточнил, в чём можно корректировать (3)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Как подрядчик составил предложение?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-4" name="question44")
+                                        +e('span').span
+                                        +e('span').text указал только общую стоимость всех работ. Например, ремонт кухни — 200 тысяч под ключ (-4)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="0" name="question44")
+                                        +e('span').span
+                                        +e('span').text сделал список работ, последовательность работ стоит нелогично или объединил несколько работ в одну строку. Например, поставил монтаж новой ванны перед демонтажом старой, или демонтаж старого потолка и монтаж нового указал в одной строке (0)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="1" name="question44")
+                                        +e('span').span
+                                        +e('span').text сделал список работ, работы сгруппировал по типу, например, «работы по полу» или «работы по стенам» (1)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question44")
+                                        +e('span').span
+                                        +e('span').text сделал список работ, причем работы указал в той последовательности, как они будут выполняться (3)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Как подрядчик сформулировал названия работ в расчётах?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="1" name="question45")
+                                        +e('span').span
+                                        +e('span').text понятно для вас. Можно понять, в чём суть работы (1)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="0" name="question45")
+                                        +e('span').span
+                                        +e('span').text не очень понятно — написано на профессиональном языке и без пояснений (0)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-1" name="question45")
+                                        +e('span').span
+                                        +e('span').text ничего не понятно, поскольку написано слишком запутанно и сложно (-1)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Какая длительность этапов?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question46")
+                                        +e('span').span
+                                        +e('span').text Этапы длятся не больше полутора-двух недель (3)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="1" name="question46")
+                                        +e('span').span
+                                        +e('span').text Этапы длятся месяц (1)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="0" name="question46")
+                                        +e('span').span
+                                        +e('span').text Этапы длятся  больше месяца (0)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-2" name="question46")
+                                        +e('span').span
+                                        +e('span').text Длительность этапов неизвестна (-2)
+                        +b('div').question
+                            p.ww
+                            +e('h3') На каких условиях по оплате подрядчик предлагает работать?
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-4" name="question47")
+                                        +e('span').span
+                                        +e('span').text 100% предоплата (-4)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-3" name="question47")
+                                        +e('span').span
+                                        +e('span').text 50% предоплата в начале, 50% в конце ремонта (-3)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-3" name="question47")
+                                        +e('span').span
+                                        +e('span').text 50% предоплата до начала работ, 30% в середине, 20% по завершению (-3)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="question47")
+                                        +e('span').span
+                                        +e('span').text 30% предоплата за работы по ближайшему этапу, далее оплачивать каждый этап после завершения (2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="3" name="question47")
+                                        +e('span').span
+                                        +e('span').text без предоплаты за работы. Оплата после завершения этапа (3)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-2" name="question47")
+                                        +e('span').span
+                                        +e('span').text без предоплаты за работы. Оплата после завершения всех работ (-2)
+                        +b('div').question
+                            p.ww
+                            +e('h3') Вы обговорили работы и посмотрели расчёты. Теперь нужно решить, будете ли работать. Подрядчик
+                            +e('ul').label-block
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="2" name="question48")
+                                        +e('span').span
+                                        +e('span').text не торопит с принятием решения (2)
+                                +e('li')
+                                    +e('label').label
+                                        +e('input')(type="radio" data-score="-2" name="question48")
+                                        +e('span').span
+                                        +e('span').text торопит с решением, намекает на свою занятость. Говорит, что у него очередь клиентов и если вы сейчас не скажете, то он возьмет другой проект (-2)
+                        +e('button').button.button.back(type="button" value="назад") назад
+                        +e('button').button.button.button-green.next(type="button" value="вперед") К результатам
+    +b('section').fifth-slide.questions
+        .container
+            .row
+                .col-12
+                    +b('h1') вы набрали <span class="total"></span> %
+                    +b('div').test-desc.total-screen
+                        +e('ul')
+                            +e('li') <b>90-100%</b> Легендарный уровень
+                            +e('li') <b>80-90%</b> Отличный уровень
+                            +e('li') <b>60-80%</b> Хороший уровень
+                            +e('li') <b>30-50%</b> Средний уровень
+                            +e('li') <b>20-30%</b> Не фонтан
+                            +e('li') <b>менее 20%</b> Бегите
+
+                        +e('p') - Высокая оценка не гарантирует результат с адекватным запросу срокам, бюджету, качеству и комфорту воплощения. Потому что от подрядчика зависит не более 50% результата. Но высокая оценка значительно повышает вероятность успеха.
+                        +e('p') - Низкая оценка не гарантирует низкое качество работы подрядчика. Возможно, если нет никаких сбоев, он работает очень хорошо. Но вероятность, что всё сорвётся в случае непредвиденных обстоятельств, очень высокая.
+                        +e('p') - Тест не может учесть всех условий вашей встречи. Также возможности соблюсти все "правильные" условия в одну встречу может не представиться. Делайте на это поправку и не будьте чрезмерно требовательны.
+                        +e('p') - Учтите, что подрядчики с высоким уровнем оценки, вероятнее всего, будут иметь соответствующий уровень цен. Что будет обосновано. Подрядчики с низким уровнем оценки тоже могут иметь высокий уровень, но обоснованно это уже не будет.
+                    +e('button').button.button.back(type="button" value="назад") назад
+    +b('footer').footer
+        .container
+            .row
+                .col-12
+                    +e('h2').calc подсчет суммы всех отвеченных баллов  <span class="calc">0</span>
+                    +e('h2').calc подсчет суммы всех максимальных баллов в тесте <span class="max-calc">0</span>
+                    +e('h2').calc сумма всех отвеченных баллов разделить на сумму всех баллов максимальных ответов умножить на 100 <span class="total-percent">0</span>

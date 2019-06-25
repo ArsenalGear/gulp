@@ -1,46 +1,36 @@
 .button {
   position: relative;
-  overflow: hidden;
-  display: inline-block;
-  padding: 0 1rem;
-  border-radius: $bor-rad-btn;
+  margin: 0.8rem;
+  padding: 1rem 2rem;
+  //border-radius: $bor-rad-btn;
   text-align: center;
-  text-decoration: none;
   text-transform: uppercase;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   cursor: pointer;
-  transition: $transition-default;
-  font: 500 0.6875rem/2.4375rem $font-main;
-  letter-spacing: 1.1px;
+  background-color: $brown;
+  outline: none;
+  border: 1px solid $brown;
+  color: $white;
+  font: 500 1rem/1.2rem $font-main;
 
   &:hover,
   &:focus {
+    background-color:$white;
+    color: $brown;
     text-decoration: none;
   }
 
   &-green {
-    background-color: $btn-light-green;
-    color: $white;
+    background-color: $green;
+    border: 1px solid $green;
 
     &:hover,
     &:focus {
-      background-color: $btn-dark-green;
-      color: $white;
+      background-color:$white;
+      color: $green;
+      text-decoration: none;
     }
   }
 
-  &-orange {
-    background-color: $btn-light-green;
-    color: $text;
-    border: 2px solid $btn-orange;
-
-    &:hover,
-    &:focus {
-      background-color: $btn-orange;
-      color: $white;
-    }
-  }
 }
 
 

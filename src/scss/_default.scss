@@ -11,8 +11,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font: 400 1rem/1.125rem;
-  font-family: $font-main, Arial, sans-serif;
+  font: 400 1rem/1.125rem $font-main;
+  //font-family: $font-main, Arial, sans-serif;
   color: $text;
   background: $white;
 }
@@ -34,8 +34,11 @@ h6 {
 }
 
 h1 {
-  font-size: 2rem;
-  line-height: 3.34rem;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #fff;
+  background-color: $brown;
+  padding: 1rem;
 }
 h2 {
   font-size: 1.5rem;
@@ -43,7 +46,8 @@ h2 {
 }
 h3 {
   font-size: 1.17rem;
-  line-height: 3.17rem;
+  line-height: 1.3rem;
+  margin-bottom: 0.8rem;
 }
 h4 {
   font-size: 1rem;
@@ -65,8 +69,7 @@ p {
 
 b, strong {
   color: inherit;
-  font: inherit;
-  font-weight: bold;
+  font: 700 1rem/1.125rem $font-main;
 }
 
 ul {
@@ -75,7 +78,9 @@ ul {
 }
 
 li {
-  list-style: none;
+  //list-style: none;
+  list-style: inside none;
+  line-height: 1.4rem;
 }
 
 fieldset {
@@ -88,30 +93,34 @@ label {
 
 input {
 
-  &[type=checkbox],
-  &[type=radio]
-  {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  //&[type=checkbox],
+  //&[type=radio]
+  //{
+  //  -webkit-appearance: none;
+  //  -moz-appearance: none;
+  //  appearance: none;
+  //
+  //  &::-ms-clear {
+  //    display: none;
+  //  }
+  //}
+  //
+  //&[type=number] {
+  //  -moz-appearance: textfield;
+  //
+  //  &::-webkit-inner-spin-button {
+  //    -webkit-appearance: none;
+  //    margin: 0;
+  //  }
+  //  &::-webkit-outer-spin-button {
+  //    -webkit-appearance: none;
+  //    margin: 0;
+  //  }
+  //}
+}
 
-    &::-ms-clear {
-      display: none;
-    }
-  }
-
-  &[type=number] {
-    -moz-appearance: textfield;
-
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-    &::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-  }
+button {
+  margin-top: 1rem;
 }
 
 a, button, input {

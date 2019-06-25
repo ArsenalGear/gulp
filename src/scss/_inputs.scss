@@ -1,29 +1,26 @@
-.input-default {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  padding: 1.125rem 2.0625rem;
-  background: $white;
-  //border: 1px solid $border-default-color;
-  border-radius: $bor-rad-inpt;
-  font: 500 .875rem/1.25rem $font-main;
-  color: $text;
+.question__label {
+  align-items: center;
+  display: flex;
+  position: relative;
 
-  &::placeholder {
-    opacity: 1;
-    font: 400 0.875rem/1.5rem $font-main;
-    color: #a3a3a3;
+  & .question__span{
+    display: block;
+    margin-right: 1rem;
+    min-width: 16px;
+    min-height: 16px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #d97925;
+    border-radius: 50%;
   }
-  &:hover {
-    transition: $transition-default;
-    border-color: $link-color;
-  }
-  &:focus {
-    transition: $transition-default;
-    border-color: $link-color;
-  }
-}
 
-@media screen and (max-width: 991px) {
-
+  & input {
+    position: absolute;
+    opacity: 0;
+    &:checked + span {
+      background-color: #d97925;
+      border: 2px solid #d97925;
+      border-radius: 50%;
+    }
+  }
 }
